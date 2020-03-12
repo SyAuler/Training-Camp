@@ -1,0 +1,9 @@
+Agregação:
+
+É uma associação fraca onde tenta-se demonstrar que as informações de um objeto (chamado objeto-todo) 
+precisam ser complementados pelas informações contidas em um ou mais objetos de outra classe (chamados objetos-parte).
+A existência do Objeto-Parte faz sentido, mesmo não existindo o Objeto-Todo, porém o seu comportamento muda, ou seja, 
+o objeto parte "é um atributo" do objeto todo, onde o ciclo de vida do objeto parte é limitado ao ciclo de vida 
+do objeto todo. A agregação indica que uma das classes do relacionamento é uma parte, ou está contida em outra classe. 
+As palavras chaves usadas para identificar uma agregação são: "consiste em", "contém", "é parte de".
+

@@ -1,0 +1,6 @@
+Composição
+
+Já a Composição é uma agregação forte; nela, a existência do Objeto-Parte NÃO faz sentido se o Objeto-Todo não existir.
+A composição também é um relacionamento caracterizado como parte / todo, mas, neste caso, o todo é responsável pelo 
+ciclo de vida da parte. Na composição o objeto-pai (todo) é responsável por criar e destruir suas partes. 
+Em uma composição um mesmo objeto-parte não pode se associar a mais de um objeto-pai.
