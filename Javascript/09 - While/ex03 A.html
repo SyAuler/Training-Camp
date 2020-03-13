@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+03. Faça um programa que receba vários números, calcule e mostre.
+a) A soma dos números digitados;
+b) A quantidade de números digitados;
+c) A média dos números digitados;
+d) O maior número digitado;
+e) O menor número digitado;
+f) A quantidade de números pares;
+g) A quantidade de números ímpares;
+h) A média dos números pares;
+Finalize a entrada dos dados com a digitação do número 30.000
+*/
+	var num, cont, soma, qtde, media, maior, menor, par, contPar, contImpar, medPar, somaPar;
+	
+		cont = 0;
+		soma = 0;
+		media = 0;
+		contImpar = 0;
+		contPar = 0;
+		somaPar = 0;
+		medPar = 0;
+		
+			num = parseInt(prompt("Informe um número: "));
+		while (num != 30000 ) {
+			document.write("Os números informados são: "+num+"<br>");
+			soma = soma + num; /*A*/
+			cont++; /*B*/
+			media = (soma / cont)//.toFixed(2); /*C*/
+						
+			if ((maior < num) || (cont == 1)) {  /*D*/
+			maior = num;
+			}	
+			if ((menor > num) || (cont == 1)) {	/*E*/
+			menor = num;
+			}
+			
+			if (num % 2 == 0) {
+				contPar++; /*F*/
+				somaPar = somaPar + num;
+				mediaPar = (somaPar / contPar).toFixed(2);	//H
+			} else {
+				contImpar++; /*G*/
+			}
+			num = parseInt(prompt("Informe um número: "));
+		}
+				
+		document.write("<br>A quantidade de números digitados é: "+cont+++"<br>");
+		document.write("<br>A soma dos números é: "+soma+"<br>");
+		document.write("<br>A média dos números é: "+media+"<br>");
+		document.write("<br>O maior número é: "+maior+"<br>");
+		document.write("<br>O menor número é: "+menor+"<br>");
+		document.write("<br>Os números ímpares são: "+contImpar+"<br>");
+		document.write("<br>Os números pares são: "+contPar+"<br>");
+		document.write("<br>A soma dos números pares é: "+somaPar+"<br>");
+		document.write("<br>A media dos números pares é: "+mediaPar+"<br>");
+		
+		
+		
+
+</script>

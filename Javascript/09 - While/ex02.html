@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+02. Usando a estrutura while faça um programa que receba 6 números inteiros e informe
+a soma e a média dos mesmos. Utilize no máximo 4 variáveis.
+*/
+	var num, cont, soma, media;
+		cont = 1;
+		soma = 0;
+		media = 0;
+		while (cont <= 6 ) {
+			num = parseInt(prompt("Informe um número: "));
+		
+			soma = soma + num;
+			media = soma / cont.toFixed(2);
+			cont++;
+		
+			document.write("O número informado é: "+num+"<br>");
+		}
+		document.write("<br></br>A soma dos números é: "+soma+"<br>");
+		document.write("<br></br>A média dos números é: "+media+"<br>");
+</script>

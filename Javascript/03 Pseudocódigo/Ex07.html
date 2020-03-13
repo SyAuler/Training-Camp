@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+
+	var a, b, c, aux;
+	
+		a = parseInt(prompt("Informe o valor de A"));
+		b = parseInt(prompt("Informe o valor de B"));
+		c = parseInt(prompt("Informe o valor de C"));
+
+		if (a > b) {
+			aux = a;
+			a = b;
+			b = aux;
+		}
+		if (a > c) {
+			aux = a;
+			a = c;
+			c = aux;
+		}
+		if (b > c) {
+			aux = b;
+			b = c;
+			c = aux;
+		}
+		document.write("A ordem crescente é: " +a+','+b+','+c);
+
+</script>

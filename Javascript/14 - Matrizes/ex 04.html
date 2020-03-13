@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script>
+/*
+4. Faça um programa que leia uma matriz 3 x 3. Leia também um valor X. O programa
+deverá fazer uma busca desse valor na matriz e, ao final, escrever a localização (linha e
+coluna) ou uma mensagem de “não encontrado”.
+*/
+	var matriz=[], i, j, linhas, colunas, result;
+	
+	linhas=3;
+	colunas=3;
+	
+	for (i=0; i < linhas; i++){
+		matriz[i]=[];
+		for (j=0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i=0; i < linhas; i++){
+		for ( j=0; j < colunas; j++){
+			matriz[i][j] = prompt('Informe números aleatórios');
+		}
+	}
+	
+	num = prompt('Informe o número a ser procurado');
+	
+	for (i=0; i < linhas; i++){
+		for ( j=0; j < colunas; j++){
+			if (matriz[i][j] == num){
+				result = matriz[i][j];
+				document.write("A linha é " +i+" e a coluna é " +j);
+				document.write(" O resultado é " +result+"<br>");
+			} else {
+				(matriz[i][j] =! num)
+					document.write(" O número "+num+" não foi encontrado<br>");
+			}
+		}
+	}
+
+</script>

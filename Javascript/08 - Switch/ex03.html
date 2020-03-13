@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+ /*
+ 3- Faça um programa que receba 2 números quais quer e a
+operação desejada (+, -, *. /) e informe o resultado.
+ */
+
+	var num1, num2, operacao, result
+	
+	num1 = parseInt(prompt("Informe um número: "));
+	operacao = prompt("Informe a operação: ");
+	num2 = parseInt(prompt("Informe outro número: "));
+	
+	
+		switch (operacao) {
+			case "+":
+				result = num1 + num2;
+				document.write("O resultado é: " +result);
+				break;
+			case "-":
+				result = num1 - num2;
+				document.write("O resultado é: " +result);
+				break;
+			case "*":
+				result = num1 * num2;
+				document.write("O resultado é: " +result);
+				break;
+			case "/":
+				result = num1 / num2;
+				document.write("O resultado é: " +result);
+				break;	
+			default:
+				document.write("Valor não reconhecido");
+				break;
+		}
+</script>

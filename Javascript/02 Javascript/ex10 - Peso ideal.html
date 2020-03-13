@@ -1,0 +1,26 @@
+<meta charset:"UTF-8">
+<script>
+
+/* 10- Faça um fluxograma que tendo como dados de entrada 
+a altura e o sexo de uma pessoa, 
+calcule e informe o peso ideal utilizando as seguintes fórmulas: 
+a. Homens : peso ideal = 72.7 * altura -58 
+b. Mulheres : peso ideal = 62.1 * altura -44.7 
+*/
+	var altura, sexo, M, F, result
+	
+		document.write("Calculando o peso ideal");
+		
+		altura = parseFloat(prompt("Informe a sua altura"));
+		sexo = prompt("Informe o seu sexo: M ou F");
+		
+		if (sexo == "M") {
+			result = parseFloat((72.7 * altura) -58)
+		}
+		if (sexo == "F") {
+			result = parseFloat((62.1 * altura) -44.7)
+		}
+		
+		document.write("<br><br>O peso ideal é: " ,result.toFixed(3));
+		
+</script>

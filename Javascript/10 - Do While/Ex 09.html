@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+/*09. Uma escola tem 5 turmas e cada turma tem n alunos. 
+Criar um programa que imprima, por turma, 
+total de alunos com média superior a 7 
+e a média geral da escola.  
+ 
+*/
+var turma, alunos, mediaAluno, nturma, alunosMediaMaior7, alunosEscola, alunosEscolaNota;
+
+	alunosEscola = 0;
+	alunosEscolaNota = 0;
+	turma = 1; 
+	alunos = 1;
+	
+	do { 
+		nturma = parseInt(prompt("Informe o número de alunos na turma: "+ turma));
+
+		alunosMediaMaior7 = 0;
+		
+		do {
+			alunosEscola++;
+			mediaAluno = parseInt(prompt("Informe a média do aluno: "+ alunos));
+			alunosEscolaNota = alunosEscolaNota + mediaAluno;
+			if (mediaAluno >= 7) {
+				alunosMediaMaior7++;
+			}
+		alunos++	
+		} while (alunos <= nturma)
+		document.write("<br><br>A quantidade de alunos com media maior que 7 na turma " +turma+ " é " +alunosMediaMaior7);
+	
+	turma++
+	} while (turma <= 2)
+	
+	document.write("<br><br>A media da escola é " + (alunosEscolaNota / alunosEscola) );
+</script>

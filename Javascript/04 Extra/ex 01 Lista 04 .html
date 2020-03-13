@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+/* 
+01. Faça um programa que receba 3 números e informe o maior deles.
+a. Utilize Ifs aninhados
+b. Utilize 4 variáveis
+*/
+
+	var a, b, c, maior
+	
+	document.write("Calculando o número maior");
+	
+	a = parseInt(prompt("Informe um número: "));
+	b = parseInt(prompt("Informe outro número: "));
+	c = parseInt(prompt("Informe mais um número: "));
+	
+		
+	if (a > b) {
+		if (a > c) {
+			maior = a;
+		} else {
+			maior = c;
+		} 
+	}
+	else {
+		if (b > c) {
+			maior = b;
+		} else {
+			maior = c;
+		}
+	}
+	document.write("<br><br>O número maior é: " +maior);
+	
+</script>

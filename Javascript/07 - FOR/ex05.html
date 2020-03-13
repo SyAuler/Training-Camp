@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+/*05. Faça um programa que receba o nome e o salário de 10 funcionários 
+de uma empresa e retorne o nome e o salário do funcionário 
+que receber o salário mais alto. 
+*/
+ 
+	var nome, salario, maior, nn
+	
+		
+	for(n = 1; n <= 10; n++) {
+		nome = prompt("Informe o nome do funcionário");
+		salario = parseFloat(prompt("Informe o salario do funcionario"));
+	
+		if ((maior < salario) || (n == 1)) { /* definir o primeiro valor, depois ele compara e mantem o mais alto*/
+			maior = salario
+			nn = nome		
+		}
+	}
+	document.write("O nome do funcionário é: " +nn+ "<br>");
+	document.write("o salário maior é: " +maior+ "<br>");	
+
+</script>

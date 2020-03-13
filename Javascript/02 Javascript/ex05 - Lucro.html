@@ -1,0 +1,26 @@
+<meta charset"UTF-8">
+<script>
+
+/*5- Faça um fluxograma que calcule o lucro em reais obtido com todas 
+as unidades de um determinado produto. 
+O usuário deverá informar o nome do produto, o preço de custo, 
+o preço de venda, e a quantidade de itens vendidos.
+*/
+	
+	var lucro_liquido
+		
+	document.write("Calculando o Lucro das vendas <br><br>");
+	
+	nome_produto = (prompt("Informe o nome do produto: "));
+	preco_custo = parseFloat(prompt("Informe o preço de custo do produto: "));
+	preco_venda = parseFloat(prompt("Informe o preço de venda do produto: "));
+	qtde_item = parseFloat(prompt("Informe a quantidade de itens: "));
+	
+	lucro_liquido = ((preco_venda - preco_custo) * qtde_item)
+	
+	document.write("<br>O nome do produto é: ",nome_produto);
+	document.write("<br>O preço de custo é R$: ",preco_custo);
+	document.write("<br>O preço de venda é R$: ",preco_venda);
+	document.write("<br>O lucro líquido é R$: ",lucro_liquido);
+
+</script>

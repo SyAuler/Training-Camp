@@ -1,0 +1,25 @@
+﻿<meta charset:"UTF-8">
+<script>
+
+/*6- Faça um fluxograma que receba individualmente 2 números inteiros positivos 
+e informe a diferença entre eles. 
+Sendo que o segundo número deve ser obrigatoriamente menor que o primeiro. */
+
+	var num1, num2, result
+	
+		document.write("Calculando 2 números inteiros <br><br>");
+	
+		num1 = parseFloat(prompt("Informe um número: "));
+		num2 = parseFloat(prompt("Informe outro número: "));
+	
+		result = 0;
+		if (num1 >= num2) {
+			result = num1 - num2;
+		} else {
+			result = num2 - num1;
+		}
+		document.write("<br><br>O número 1 é: ", num1);	
+		document.write("<br><br>O número 2 é: ", num2);	
+		document.write("<br><br>A diferença entre os números é: ", result);	
+
+</script>

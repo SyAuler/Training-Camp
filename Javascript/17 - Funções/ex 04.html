@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script>
+/*Faça um programa que calcule o índice de massa corporal de uma pessoa, 
+com base altura e peso informados. 
+Obs.: Faça uma função calcularIMC(altura, peso) que receba a altura e 
+o peso de um indivíduo e retorne o seu IMC (Índice de Massa Corporal) 
+IMC = peso/(altura * altura). Com base no IMC gerado pela função, 
+o programa deverá informar se o indivíduo está abaixo do índice 
+de magreza, considerando os seguintes critérios: 
+a. IMC < 18.5 – seu IMC indica que vc está abaixo do peso 
+b. IMC > 35 – seu IMC indica que vc está acima do peso 
+c. IMC > =18.5 e IMC <= 35 – seu IMC indica que vc está no peso ideal 
+*/
+
+function calcularIMC(altura, peso){
+	var IMC = (peso / (altura * altura));
+	return IMC.toFixed(2);
+}
+
+	var altura = parseFloat(prompt('Informe a sua altura em centímetros'))/100;
+	var peso = parseFloat(prompt('Informe o seu peso'));
+	
+	var IMC = calcularIMC(altura, peso);
+	
+	if ( IMC < 18.5 ){
+		document.write('Seu IMC indica que vc está abaixo do peso <br>');
+	}
+	if (( IMC >= 18.5 ) && ( IMC <= 35)){
+		document.write('Seu IMC indica que vc está no peso ideal <br>');
+	}
+	if ( IMC > 35 ){
+		document.write('Seu IMC indica que vc está acima do peso <br>');
+	}
+	
+		
+	document.write('O IMC é: '+IMC);
+	
+</script>

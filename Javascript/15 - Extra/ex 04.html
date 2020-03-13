@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script>
+/*
+4. Faça um programa que preencha um vetor com dez números inteiros, calcule e mostre o
+vetor resultante de uma ordenação crescente.
+*/
+
+var num=[], i, trocou, aux;
+	
+	linha=10;
+	
+	for (i=0; i < linha; i++){
+		num[i] = parseInt(prompt('Informe 10 números aleatórios '+i+' de 10'));
+	}
+	for (i=0; i < linha; i++){
+		document.write('Os números são '+num[i]+'<br>'); 		
+	}
+	while (true){
+		trocou = false;
+	
+		for (i=0; i < (linha-1); i++){
+			if (num[i] > num[i+1]){
+				trocou = true;
+				aux = num[i];
+				num[i] = num[i+1];
+				num[i+1] = aux;
+			}
+		}
+		if (trocou == false){
+			break;
+		}
+	}
+	for (i=0; i < (linha); i++){
+	document.write('A ordem crescente é '+num[i]+'<br>'); 
+	}	
+
+	
+</script>

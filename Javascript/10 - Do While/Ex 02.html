@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+/* 02. Faça um programa que receba 6 números inteiros 
+e informe a soma e a média dos mesmos
+*/
+
+var num, cont, soma, media;
+		
+		soma = 0;
+		media = 0;
+		cont = 0;
+		do{
+			num = parseInt(prompt("Informe um número inteiro "));
+			document.write("Os números são: "+num+"<br>");
+			cont++;
+			soma = soma + num
+		} while (cont < 6)
+			media = soma / (cont -1); // vai diminuir um para o valor dar 15 e não 16
+			
+			document.write("<br>A soma dos números é: "+soma+"<br>");
+			document.write("A média dos números é: "+media+"<br>");
+		
+</script>

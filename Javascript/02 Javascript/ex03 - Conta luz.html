@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+
+/*3- Faça um fluxograma que receba como entrada 
+o consumo de energia elétrica em Kwatts e informe o valor da fatura. 
+Considere que: 
+a. Cada kwatt custa R$0,41 
+b. Será cobrada uma taxa de iluminação pública que corresponde a 3% 
+do valor consumido a qual deverá ser informada. 
+c. Será cobrada uma taxa de manutenção no valor de R$1,70. */
+
+	var consumo_energia, total_fatura;
+	
+		document.write("Calculando o valor total da fatura de luz. <br><br>");
+		
+		consumo_energia = parseFloat(prompt("Informe o consumo de energia elétrica em Kwatts : "));
+	
+		valor_consumo = (consumo_energia * 0.41);
+		tx_iluminacao = (valor_consumo * 3) /100;
+		tx_manutencao = 1.70;
+		
+		total_fatura = (valor_consumo + tx_iluminacao + tx_manutencao);
+		
+		document.write("Valor do consumo: "+valor_consumo+'<br>');
+		document.write("<br> Taxa de iluminação: "+tx_iluminacao+ '<br>');
+		document.write("<br> Taxa de manutenção: "+tx_manutencao+ '<br>');
+		document.write("<br> O valor total da fatura é: "+total_fatura+ '<br>');
+		
+</script>

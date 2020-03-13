@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script>
+/*
+2. Faça um programa que preencha e leia uma matriz 3 x 3, conte e informe quantos valores
+maiores que 10 ela possui, ou retorne uma mensagem de “não encontrado”, caso não
+existam valores maiores do que 10.
+*/
+	var matriz=[], i, j, linhas, colunas, maior, cont;
+	cont=0;
+	maior = 10;
+	linhas = 3;
+	colunas = 3;
+	//criando a matriz
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	//preenchendo a matriz
+	for (i = 0; i < linhas; i++) {
+		for (j = 0; j < colunas; j++) {
+			matriz[i][j] = prompt("Informe os números aleatórios ");
+		}
+	}
+	//exibindo a matriz
+	for (i = 0; i < linhas; i++) {
+		for (j = 0; j < colunas; j++) {
+			document.write('matriz['+i+']['+j+'] = '+matriz[i][j]+'<br>');
+		}
+	}
+	//contando números maiores do que 10
+	for (i = 0; i < linhas; i++) {
+		for (j = 0; j < colunas; j++) {
+			if(matriz[i][j] > maior){
+				cont=cont+1;
+			}
+		}
+	}
+	if(cont==0){
+		document.write("Não existem números maiores do que 10");
+	}
+	if(cont>0){
+		document.write("Foram localizados "+cont+" números maiores do que 10");
+	}
+				
+</script>

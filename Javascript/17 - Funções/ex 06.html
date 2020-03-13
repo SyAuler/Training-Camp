@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<script>
+/*6. Escreva uma função que com base em um ano informado pelo usuário retorne: 
+a. Os anos de copa do mundo a partir de 1930. 
+b. A função deverá verificar se a informação fornecida pelo usuário é um número, 
+caso não seja, deverá solicitar a entrada de um novo ano. 
+c. A função deverá verificar se o ano informado pelo usuário é maior ou igual a 1930, 
+caso não seja, deverá informar ao usuário que a primeira copa aconteceu em 1930 
+e solicitar um novo ano para o usuário. 
+*/
+function validoAnoCopa(ano){
+	if ((ano >= 1930) && (ano <= 2018)){
+		return true;
+	} else {
+		alert('A primeira Copa aconteceu em 1930. Você informou o ano '+ano);
+		return false;
+	}
+}
+
+function testaNum(ano){
+	inteiro = parseInt(ano); // forçar para inteiro (se alterar o valor não é inteiro)
+	if (inteiro == ano){  //string altera valor.
+		return true;
+	} else {
+		alert('Informe um ano válido. Você informou o valor '+ano);
+		return false;
+	}
+}
+
+function copa(ano){
+	anoCopa=[];
+	for (i = 1930; i <= ano; i=i+4){
+		anoCopa.push(i); //adiciona para o vetor
+	}
+	return anoCopa;
+}
+
+while(true){
+	var ano = prompt('Informe um ano qualquer');
+
+	if ((testaNum(ano)) && (validoAnoCopa(ano))){
+		document.write('Os anos da Copa do Mundo foram <br><br>'+copa(ano)+'<br>');
+		break;
+	}
+}
+</script>

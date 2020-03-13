@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+/*03. Faça um programa que receba um número, 
+calcule e mostre a tabuada desse número.
+*/
+
+	var num, cont, multiplicacao;
+	
+		cont = 1;
+		multiplicacao = 0;
+		num = 1;
+	
+		do{
+			document.write("Tabuada do "+num+"<br>");
+			do{
+				multiplicacao = cont * num;
+				document.write(num + " X " +cont+ " = " + multiplicacao+"<br>");
+				cont++;
+
+			} while (cont <= 10)
+			num++;
+			cont = 1;
+		
+		} while (num <=10)
+
+</script>

@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+06- Um endocrinologista deseja controlar a saúde de seus pacientes e,
+ para isso, se utiliza do Índice de Massa Corporal (IMC). Sabendo-se que 
+ o IMC é calculado através da fórmula: IMC = peso / altura²
+ onde: 	- peso é dado em quilos; 
+		- altura é dada em metros
+ Crie um programa que apresente o nome do paciente e sua faixa de risco,
+ baseando-se na seguinte tabela:
+ IMC						Faixa de risco
+ abaixo de 20 			- Abaixo do peso
+ a partir de 20 até 25 	- normal
+ acima de 25 até 30 	- excesso de peso
+ acima de 30 até 35 	- obesidade
+ acima de 35 			- obesidade mórbida
+*/
+
+	var IMC, peso, altura, nome, risco
+	
+		nome = prompt("Informe o seu nome: ");
+		peso = parseInt(prompt("Informe o seu peso: "));
+		altura = parseFloat(prompt("Informe a sua altura: "));
+				
+		IMC = peso / Math.pow(altura, 2)
+		
+		if (IMC < 20) {
+			result = "Abaixo do peso";
+		}
+		if ((IMC > 20) && (IMC < 25)) {
+			result = "Normal";
+		}
+		if ((IMC > 25) && (IMC < 30)) {
+			result = "Excesso de peso";
+		}
+		if ((IMC > 30) && (IMC < 35)) {
+			result = "Obesidade";
+		}
+		if (IMC > 35) {
+			result = "Obesidade Mórbida";
+		}
+		
+		document.write("<br><br>Paciente: " +nome);
+		document.write("<br><br>IMC: " +IMC);
+		document.write("<br><br>Faixa de risco: " +result);
+</script>
+		

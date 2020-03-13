@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<script>
+/*
+5. Faça um programa que receba a nota final de 10 alunos em 4 disciplinas diferentes. Ao
+final, o programa deve apresentar a média geral de cada disciplina.
+*/
+	var qtdeAlunos = 10;
+	var qtdeDisciplinas = 4;
+	var disciplina = 0;
+	var media = 1;
+	var nota = 2;
+	var soma = 3;
+	
+	//
+	var disciplinas = new Array(qtdeDisciplinas);
+	var medias = new Array(qtdeDisciplinas);
+	var somas = new Array(qtdeDisciplinas);
+	var matriz = new Array(qtdeDisciplinas);
+	var notas = new Array(qtdeAlunos);
+	
+	//monta a matriz inserindo um array por linha
+	for (i = 0; i < qtdeDisciplinas; i++) {
+		matriz[i] = new Array(4);
+		matriz[i][disciplina] = disciplinas;
+		matriz[i][media] = medias;
+		matriz[i][soma] = somas;
+		matriz[i][nota] = notas;
+	}	
+
+	for (i = 0; i <	qtdeDisciplinas; i++) {
+		matriz[i][soma] = 0;
+		matriz[i][disciplina] = prompt('Informe o nome da disciplina');
+		for (j = 0; j < qtdeAlunos; j++) {
+			matriz[i][nota][j] = parseInt(prompt('Informe a nota do aluno ' +j+ ' da disciplina ' +matriz[i][disciplina]));
+			matriz[i][soma] = (matriz[i][soma] + matriz[i][nota][j]);
+		}
+		matriz[i][media] = matriz[i][soma] / qtdeAlunos;
+	}
+	
+	for (i = 0; i <	qtdeDisciplinas; i++) {
+		document.write('<br>A média da disciplina '+matriz[i][disciplina]+' é '+matriz[i][media]+'<br>');
+	}
+
+</script>

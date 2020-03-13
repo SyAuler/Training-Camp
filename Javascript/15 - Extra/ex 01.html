@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+/*
+1. Faça um programa que preencha um vetor com 8 números inteiros, 
+calcule e mostre dois vetores resultantes. O primeiro vetor resultante
+deve conter números positivos, o segundo deve conter números negativos.
+Cada vetor resultante vai ter, no máximo 8 posições, que poderão
+não ser completamente utilizadas.
+*/
+	var cont, positivo, negativo;
+	var num=[], positivo=[], negativo=[];
+	
+	for (cont=0; cont < 8; cont++){
+		num[cont] = prompt('Informe números positivos e negativos. '+cont+ ' chance de 8 ');
+		
+		if (num[cont] > 0){
+			positivo[cont] = num[cont];			
+		} else {
+			negativo[cont] = num[cont];	
+		}
+	}
+	document.write('Os números positivos são '+positivo+ '<br>');
+	document.write('Os números negativos são '+negativo+ '<br>');		
+	
+</script>

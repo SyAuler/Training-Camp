@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<script>
+
+/*Jogo Adivinhar Número
+*/
+
+var	ganhou=false
+var numeroUnico, mensagem, erros=0;
+var cont, contUnico, qtdeChances, numero, numeroUnico;
+var chances=[], numerosIncorretos=[]
+
+	mensagem = "";
+	qtdeChances = parseInt(prompt("Informe a quantidade de chances"));
+	numeroSorteado = Math.floor((Math.random() * 100) + 1);
+	
+	for (cont = 1; cont <= qtdeChances; cont++){
+		while (true) {
+			numero = parseInt(prompt("Informe um número: Chance "+cont+" de "+qtdeChances + ' ' + mensagem));
+			if ((numero > 0) && (numero <= 100)) {
+				numeroUnico = true;
+				
+				//Percorre o array para ver se já não foi incluido	
+				for (contUnico = 1; contUnico <= qtdeChances; contUnico++){
+					if (numero == chances[contUnico]) {
+						numeroUnico = false;	
+					}	
+				}
+				
+				//se não achou na lista adiciona ao array
+				if (numeroUnico) {
+					mensagem = "";
+					chances[cont] = numero;
+					
+					if (numero == numeroSorteado) {
+						ganhou = true;
+					}
+					
+					//sair dor while, por que número é valido
+					break; 
+				} else {
+					numerosIncorretos[erros++] = numero;
+					mensagem = mensagem + " (O número: "+numero+" já foi informado)";
+				}
+			} else {
+				numerosIncorretos[erros++] = numero;
+				mensagem = mensagem + " (Número precisa ser maior que 0 e menor igual a 100)";
+			}
+		}
+		
+		//sair do for por que ganhou
+		if (ganhou) { 
+			break;
+		}
+	}
+	
+	if (ganhou) {
+		msgGanhou = 'PARABENS vc Acertou!!!';
+	} else {
+		msgGanhou = 'Suas chances acabaram! GAMER OVER!!!';
+	}
+	msgGanhou = msgGanhou + " O número sorteado foi " + numeroSorteado;
+	msgGanhou = msgGanhou + " Chance utilizadas foram" + qtdeChances;
+	msgGanhou = msgGanhou + " Total de Erros " + erros;
+	if (erros > 0) {
+		msgGanhou = msgGanhou + " Eles foram: " + numerosIncorretos.toString();
+	}
+	document.write('\n' + msgGanhou);
+</script>

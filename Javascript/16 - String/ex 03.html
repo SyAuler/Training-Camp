@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+/*
+3- Faça um programa que receba uma frase, calcule e
+mostre a quantidade de vezes que a palavra ´aula´ aparece
+na frase digitada.
+*/
+
+
+var frase, palavras, i, qtde;
+
+	frase = prompt('Digite a frase');
+	frase = frase.toUpperCase();
+	
+	palavras = frase.split(' ');
+
+	qtde = 0;
+	
+	for (i=0; i <= palavras.length; i++);{
+		if (palavras[i] == 'AULA'){
+			qtde = parseInt(qtde)+1;
+		}
+	}
+	document.write('Quantidade de palavras aula na frase digitada '+qtde);
+</script>

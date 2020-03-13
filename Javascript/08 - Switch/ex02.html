@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+/* 2- Faça um programa que receba um código e a quantidade
+na compra de um determinado produto. Baseado no código,
+o programa deverá escrever o nome do produto e calcular
+o valor total da compra. Os códigos seguem abaixo:
+*/
+
+	var codigo, qtde, un, total
+	
+	codigo = parseInt(prompt("Informe o código do produto: "));
+	qtde = parseInt(prompt("Informe a quantidade: "));
+	
+	switch (codigo) {
+		case 0:
+			document.write("Cachorro Quente <br><br>");
+			un = 1.50;
+			total = qtde * un;
+			document.write("O valor total é: " ,total);
+			break;
+		
+		case 1:
+			document.write("Refrigerante<br><br>");
+			un = 2.00;
+			total = qtde * un;
+			document.write("O valor total é: " ,total);
+			break;
+		
+		default:
+			document.write("Valor não reconhecido");
+			break;		
+		}
+
+</script>

@@ -1,0 +1,26 @@
+﻿
+<meta charset:"UTF-8">
+<script>
+/* 
+8- Faça um fluxograma que para determinado valor, 
+informe se este é positivo ou negativo. 
+*/
+
+	var num1, result
+	
+		document.write("Calculando número positivo e negativo");
+	
+		num1 = parseFloat(prompt("Informe um número qualquer"));
+			
+		if (num1 == 0) {
+			result = "Zero"
+		} else {
+			if (num1 > 0) {
+				result = "Positivo"
+			} else {
+				result = "Negativo"
+			}
+		}
+		document.write("<br><br>O número é: " +result);	
+	
+</script>

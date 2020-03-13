@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+6. Faça um programa que preencha uma matriz de 10x3 com as notas de dez alunos em 3 provas. 
+O programa deverá mostrar um relatório com o número dos alunos (número da linha) e 
+a prova em que cada aluno obteve a menor prova.  Ao final, o relatório deverá mostrar 
+quantos alunos tiveram a menor nota em cada uma das provas (prova1, prova2 e na prova3). 
+*/
+
+var alunos = 2;
+var colunas = 2;
+var posAluno = 0;
+var posProvas = 1;
+var qtdeProvas= 3;
+
+var matriz = new Array(alunos);
+var matrizDois = new Array(qtdeProvas);
+
+
+	//Cria a matriz de alunos
+	for (i=0; i < alunos; i++){
+		
+		//Cria uma array de duas posicoes
+		matriz[i] = new Array(colunas);
+		
+		//Posicao UM da matriz de alunos, seta o nome do aluno
+		matriz[i][posAluno] = prompt('Informe o nome do aluno '+(i+1));	
+		
+		//Posicao DOIS da matriz de alunos, seta um novo array para as notas
+		matriz[i][posProvas] = new Array(qtdeProvas);
+		
+		//Informa as 3 notas de cada aluno, dentro do array de notas, dentro da matriz..
+		for (j=0; j < qtdeProvas; j++) {
+			matriz[i][posProvas][j] = parseInt(prompt('Informe a nota '+(j+1)+' do nome do aluno '+(i+1)));
+		}
+	}
+	
+	//varrer a matriz, resolve a QUESTA A
+	for (i=0; i < alunos; i++){
+	
+		//varre as notas
+		for (j=0; j < qtdeProvas; j++) {
+		
+			//ser for a primeira nota, ou se é a menor nota entra no IF e altera o valor de menorNota
+			if ((j==0) || (menorNota > matriz[i][posProvas][j])) {
+				menorNota = matriz[i][posProvas][j];
+				posMenorNota = j+1;
+			}
+		}
+		
+		//imprime os valores do resultado
+		document.write('<br>A menor nota do aluno '+(matriz[i][posAluno])+' é '+menorNota+' LINHA: '+(i+1)+' PROVA: '+(posMenorNota)+'<br>');
+	}
+	
+	//varrer a matriz, resolve a QUESTA B
+	for (j=0; j < qtdeProvas; j++) {
+		for (i=0; i < alunos; i++){
+			if ((i==0) || (menorNotaProva > matriz[i][posProvas][j])) {
+				menorNotaProva = matriz[i][posProvas][j];
+				posMenorNotaProva = j+1;
+				qtdeAlunosComMesmaNota = 1;
+			} else if (menorNotaProva == matriz[i][posProvas][j]) {
+				qtdeAlunosComMesmaNota++;
+			}
+		}
+		
+		//imprime os valores do resultado
+		document.write('<br>A menor nota da prova '+(j+1)+' é '+menorNotaProva+' e o numero de alunos com a mesma NOTA é: '+(qtdeAlunosComMesmaNota)+'<br>');
+	}
+</script>

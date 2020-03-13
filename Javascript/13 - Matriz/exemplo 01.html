@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+	var matriz = [
+		[" Banana" , " Maça"],
+		[" Pera" , " Abacate"],
+		[" Uva" , " Tâmara"]
+	]
+	//document.write(matriz[2][0], "</br>");
+	// OU document.write(matriz);
+	
+	for (var linha = 0; linha <= 2; linha++){
+		for (var coluna = 0; coluna <= 1; coluna++){
+			if (coluna < 1){
+				document.write(matriz[linha][coluna]+" - ");
+			} else {
+			document.write(matriz[linha][coluna]+"<br>");
+			}
+		}
+	}
+</script>
+	

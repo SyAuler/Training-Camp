@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+/*06. Faça um programa que leia 10 números e obtenha: 
+a. A soma dos números digitados 
+b. A média dos números digitados 
+c. O maior número digitado 
+d. O menor número digitado */
+
+	var n, soma, media, maior, menor
+	
+		soma = 0;
+		
+	for(n = 1; n <=10; n++) { /* o que é para repetir colocar dentro do for*/
+			document.write("O número é: "+n+"<br>");
+			
+			soma = (soma + n);
+			
+			media = (soma / 10);
+			
+		if ((maior < n) || (n == 1)) { 
+			maior = n
+		}	
+		if ((menor > n) || (n == 1)) {	
+			menor = n
+		}
+	}
+		document.write("<br>A soma é: "+soma+"<br>");
+		document.write("<br>A média é: "+media+"<br>");
+		document.write("<br>O maior é: "+maior+"<br>");
+		document.write("<br>O menor é: "+menor+"<br>");
+	
+</script>

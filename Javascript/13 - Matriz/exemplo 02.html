@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script>
+	var matriz=[], i, j, linhas, colunas;
+	linhas=3;
+	colunas=3;
+	//é preciso primeiro criar a matriz "vazia"
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j< colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	//o usuário vai preencher os dados
+	for (i = 0; i < linhas; i++){
+		for (j = 0; j < colunas; j++){
+			matriz[i][j] = prompt("Informe o valor ");
+		}
+	}
+	/*for (i = 0; i < linhas; i++){
+		for (j = 0; j < colunas; j++){
+			document.write("Matriz[ "+i+" ] [ "+j+" ] = "+matriz[i][j]+ "<br>");			
+		}
+	} OU */
+	for (var i = 0; i < linhas; i++){
+		for (var j = 0; j < colunas; j++){
+			if (j < 1){
+				document.write(matriz[i][j]+" - ");
+			} else {
+			document.write(matriz[i][j]+" - ");
+			} 
+		}
+		document.write("<br>")
+	}
+</script>

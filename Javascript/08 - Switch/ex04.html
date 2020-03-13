@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<script>
+
+
+/*
+Faça um programa que receba 3 notas e calcule a média
+ponderada (nota1=25%, nota2=30% e nota3=50%) e com
+base na média informe um conceito, conforme tabulação
+abaixo:
+0 à 49 – insuficiente
+50 à 64 – regular
+65 à 84 – bom
+85 à 100 – ótimo
+
+*/
+
+	var nota1, nota2, nota3, media, result, operacao
+	
+		document.write("Calculando a média ponderada do aluno");
+	
+		nota1 = parseInt(prompt("Informe a nota 1"));
+		nota2 = parseInt(prompt("Informe a nota 2"));
+		nota3 = parseInt(prompt("Informe a nota 3"));
+
+		media = (((nota1 * (20/100)) + (nota2 * (30/100)) + (nota3 * (50/100))) / (20 + 30 + 50)) * 100;
+		
+		if (media <= 49) {
+			operacao = "Insuficiente"
+		}
+		if ((media >= 50) && (media <= 64)) {
+			operacao = "Regular"
+		}
+		if ((media >= 65) && (media < 84)) {
+			operacao = "Boa"
+		}
+		if (media > 85) {
+			operacao = "Otima"
+		}
+		switch (operacao) {
+			case "Insuficiente":
+				result = document.write("<br><br>A média é insuficiente: " +media);
+				break;
+			case "Regular":
+				result = document.write("<br><br>A média é regular: " +media);
+				break;
+			case "Boa":
+				result = document.write("<br><br>A média é boa: " +media);
+				break;
+			case "Otima":
+				result = document.write("<br><br>A média é ótima: " +media);
+				break;
+		}
+</script>

@@ -1,0 +1,30 @@
+﻿<meta charset:"UTF-8">
+<script>
+/* 7- Faça um fluxograma que receba 2 números quaisquer e diferentes 
+e retorne qual é o maior deles. 
+
+*/
+
+	var num1, num2, result
+		
+		document.write("Calculando o número maior");
+		
+		num1 = parseFloat(prompt("Informe um número: "));
+		num2 = parseFloat(prompt("Informe outro número: "));
+		
+		result = 0
+		
+		if (num1 > num2) {
+			result = num1
+		}
+		if (num1 < num2) { 
+			result = num2
+		} 
+			
+		document.write("<br><br>O número 1 é: ", num1);	
+		document.write("<br><br>O número 2 é: ", num2);	
+		document.write("<br><br>O número maior é: ",result);
+		
+
+
+</script>

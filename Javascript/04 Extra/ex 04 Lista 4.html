@@ -1,0 +1,28 @@
+﻿<meta charset=("UTF-8)>
+<script>
+
+/*
+04 - Faça um programa que calcule e informe o valor de f(x). 
+O valor de x deverá ser informado pelo usuário.
+a. O valor de f(x) é dado pela seguinte fórmula:
+𝑓(𝑥) = 8 / 2 − 𝑥
+b. Caso o valor de X seja igual a 2, deverá ser informado ao usuário 
+que o cálculo não poderá ser feito
+
+*/
+
+var f, x
+	
+	document.write("Calculando uma Função");
+	
+	x = parseFloat(prompt("Informe um número"));
+	
+	f = 8 / (2 - x)
+	
+	if (x == 2) {
+		document.write("<br><br>O cálculo não pode ser realizado com o nº 2");
+	} else {	
+		document.write("<br><br>O valor de F é: " +f);
+	}
+
+</script>

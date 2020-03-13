@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+
+/*01. Faça um programa que informe a situação de 15 alunos conforme o número de faltas, 
+para número de faltas<=13 o aluno estará aprovado; 
+para número de faltas >13 o aluno estará reprovado;
+
+*/
+
+	var aluno, nFaltas, aprovado, reprovado;
+		
+		nFaltas = 0;
+		aluno = 0;
+		
+		do{
+			nFaltas = parseInt(prompt("Informe o número de faltas do aluno "));
+			
+			if (nFaltas <=13) {
+				aprovado = nFaltas
+				document.write("O aluno possui "+aprovado+" faltas e está Aprovado <br>");
+			} else {
+				reprovado = nFaltas
+				document.write("O aluno possui "+reprovado+" faltas e está Reprovado <br>");
+			}
+			aluno++;
+		} while (aluno < 15)
+			
+</script>

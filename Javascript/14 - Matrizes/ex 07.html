@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+7. Faça um programa capaz de armazenar a quantidade de 5 produtos que estão armazenados 
+em 3 armazéns diferentes de uma companhia. Ao final, o programa deve informar: 
+a. A quantidade total de cada produto (em todos os armazéns); 
+b. A quantidade total de cada armazém ( de todos os produtos). 
+*/
+
+var armazem=[], i, j, estoque;
+
+linhas = 3;
+colunas = 5;
+posArmazem = 0;
+posProduto = 1;
+posEstoque = 2;
+
+for (i=0; i < linhas; i++){
+	armazem[i] = []
+	armazem[i][posArmazem] = prompt('Informe o armazem');
+
+	armazem[i][posProduto] = []
+	armazem[i][posEstoque] = [] 
+	
+	for (j=0; j < colunas; j++){
+		armazem[i][posProduto][j] = prompt('Informe o nome do produto '+j);
+		armazem[i][posEstoque][j] = prompt('Informe o estoque do produto '+j); 
+	}
+}
+for (i=0; i < linhas; i++){
+	document.write('Armazém '+armazem[i][posArmazem]+'<br>');
+	estoque = 0;
+	
+	for (j=0; j < colunas; j++){
+		document.write('O produto é '+armazem[i][posProduto][j]+'. ');
+		document.write('O estoque é '+armazem[i][posEstoque][j]+'<br>');
+		estoque = (estoque + parseInt(armazem[i][posEstoque][j]));
+	}
+	document.write('Total de produtos '+estoque+'<br>');
+}
+
+</script>

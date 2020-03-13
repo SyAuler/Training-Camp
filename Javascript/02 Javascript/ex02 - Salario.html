@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+
+	/*2- Faça um fluxograma que receba como entrada o valor do salário de um funcionário
+	e informe seu novo salário após o recebimento de um reajuste de 12,8%.
+	Também deverá ser informado o valor somente do reajuste. */
+	
+	var salario, novo_salario, valor_reajuste;
+					
+		document.write("Calculando o novo salário <br><br>");
+		salario = parseFloat(prompt("Informe o salário atual do funcionário: "));
+	
+		valor_reajuste = (salario * (12.8/100));
+		
+		novo_salario = (salario + valor_reajuste);
+		
+		document.write("salario= "+salario+'<br>');
+		document.write("<br> O valor do reajuste é: "+valor_reajuste+ '<br>');
+		document.write("<br> O novo salário é: "+novo_salario+ '<br>');
+</script>
+
+	

@@ -1,0 +1,21 @@
+<meta charset="UTF=8">
+<script>
+
+/*
+04. Escreva um programa que leia um número inteiro "n" e escreva a soma 
+de todos os números de 1 a "n".
+*/
+var num, cont, soma;
+	
+	cont = 0;
+	soma = 0;
+	
+	num = parseInt(prompt("Informe um número: "));
+		
+		while (cont < num) {
+			cont++;
+			soma = (soma + cont);
+		}
+		document.write("<br>O número é: " +cont);
+		document.write("<br>A soma de todos os números é: " +soma);
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+08 - Faça um programa que solicite a data de aniversário de uma pessoa 
+e calcule sua idade exata (anos, meses e dias).
+a. Ano possui 365 dias.
+b. Mês possui 30 dias.
+*/
+	var dia, dias, mes, meses, ano, anos, data_atual, data_nascimento, qtde_anos, qtde_meses
+	
+	dia = prompt("Informe o dia do nascimento");
+	mes = prompt("Informe o mes do nascimento");
+    ano = prompt("Informe o ano do nascimento");
+	
+	data_atual = new Date();
+	data_nascimento = new Date(mes + ' '+dia+', '+ano);
+	anos = (data_atual - data_nascimento) / 31556900000;
+	qtde_anos = parseInt(anos);
+	meses = (anos - qtde_anos) / (1 / 12);
+	qtde_meses = parseInt(meses); 
+	dias = parseInt(30 * (meses - qtde_meses));
+	
+	document.write("A sua idade é: " + qtde_anos + ' anos ' + qtde_meses + ' mes(es) ' + dias + ' dia(s)');
+
+</script>
+

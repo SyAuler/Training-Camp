@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script>
+/*
+centro academico tsi 99977-7179 renan - doity technovaçao
+
+01. Faça um programa que solicite e depois exiba o código
+do cliente e o valor das 3 últimas compras do respectivo
+cliente.
+- Considere uma lista de 3 clientes para o teste.
+*/
+
+var matriz=[], i, j, cont, linhas, colunas, cliente;
+	i=0;
+	j=0;
+	cont=3;
+	linhas=3;
+	colunas=4;
+	
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j< colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i = 0; i < linhas; i++){
+		matriz[i][j] = prompt("Informe o código do cliente");
+		for (j = 1; j < colunas; j++){
+			matriz[i][j] = prompt("Informe o valor das últimas 3 compras do cliente: "+(j)+" compra de 3");
+		}
+	}
+	for (i = 0; i < linhas; i++){
+		document.write("<b>Compras do cliente "+matriz[i][j]+" </b><br> ");
+		for (j = 1; j < colunas; j++){
+			document.write("Compra "+[j]+" = "+matriz[i][j]+" <br> ");
+		}
+		document.write("<br>")
+	}
+	
+</script>

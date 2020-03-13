@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+/*03. Faça um programa que preencha um vetor com 10 números inteiros, 
+calcule e mostre os números superiores a cinquenta e suas respectivas posições. 
+O programa deverá mostrar a mensagem se não existir nenhum número nessa condição 
+*/
+
+var cont, result;
+var num=[];
+	
+	
+	for (cont = 1; cont <= 10; cont++) {
+		num = prompt("Informe 10 número: " +cont+ " de 10");
+	
+	if (num > 50) {
+		result = num;	
+		document.write("O número maior que 50 é: "+result+" e sua posição é: "+cont+"<br>");
+	} else {
+		document.write("Não existem números maiores que 50 <br>");
+	}
+	}
+
+</script>

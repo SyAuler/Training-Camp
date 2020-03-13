@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+/*
+01. Usando a estrutura while faça um programa que informe a situação de 15 alunos
+baseado no número de faltas. Para número de faltas <=13, o aluno estará aprovado,
+para número de faltas > 13 o aluno estará reprovado.
+*/
+
+	var alunos, faltas, result;
+	alunos=1;
+		while (alunos <=3) {
+			faltas = prompt("Informe a quantidade de faltas: ");
+			alunos++;
+		
+		if (faltas <= 13) {
+			result = 'aprovado';
+		} else {
+			result = 'reprovado';
+		}
+	document.write("O número de faltas é: " +faltas+ " e o resultado é: " +result+"<br>");
+	}
+</script>

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script>
+
+/*05. Faça um programa que possibilite a entrada de N nomes e salários
+e exiba como resultado o salário médio e o nome da pessoa que 
+recebe o maior salário.
+*/
+
+var nome, salario, contador, soma, qtdeSalario, salMedio, maiorSalario, maiorSalarioNome;
+
+	soma = 0;
+	salMedio = 0;
+	contador = 0;
+	
+	while (true) {
+		nome = prompt("Informe o NOME ou Digite XX para Sair");
+		if (nome == 'XX') { break; }
+			
+		//Para fazer a media mais tarde	
+		contador++; 
+		
+		// Pede o salario
+		salario = parseFloat(prompt("Informe o salário: "));
+		
+		//Seta primeiro valor ou se for maior
+		if ((contador == 1) || (maiorSalario < salario)) {
+			maiorSalarioNome = nome;
+			maiorSalario = salario;
+		}
+		
+		//Para fazer a media
+		soma = soma + salario;
+	}
+	
+	salMedio = ( soma / contador ).toFixed(2);
+		
+	document.write("<br>O salário médio é "+salMedio+"<br>");
+	document.write("<br>A pessoa é "+maiorSalarioNome+ " e o maior salário é: " +maiorSalario+"<br>");
+</script>

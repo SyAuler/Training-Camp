@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script>
+/*
+3. Faça um programa em que o usuário preencha uma matriz de 4x5 e calcule e exiba a
+soma de todos os elementos da matriz.
+*/
+
+	var matriz=[], i, j, linhas, colunas, soma;
+	soma=0;
+	linhas=5;
+	colunas=4;
+	
+	for (i=0; i < linhas; i++){
+		matriz[i]=[];
+		for (j=0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i=0; i < linhas; i++){
+		for (j=0; j < colunas; j++){
+			matriz[i][j]=parseInt(prompt("Informe números aleatórios"));
+			soma =(soma + matriz[i][j]);
+		}
+	}
+	
+	document.write("A soma dos valores da matriz é "+soma);
+</script>

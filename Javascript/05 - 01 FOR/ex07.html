@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+/*
+07. Faça um programa que receba 10 números inteiros e:
+a. Informe se o número é par ou impar
+b. Informe quantos números pares foram digitados
+c. Informe quantos números ímpares foram digitados.
+*/
+
+	var n, cont, tpar, timpar;
+	tpar = 0;
+	timpar = 0;
+		
+	for (cont = 1; cont <=10; cont++) {
+		
+		n = parseInt(prompt("Informe 10 números: "));
+		
+		if (n % 2 == 0) {
+			document.write("O número é par: "+n+"<br>");
+			tpar = tpar + 1;
+		} else {
+			document.write("O número é impar: "+n+"<br>");
+			timpar = timpar + 1;
+		} 
+	}
+	document.write("<br>Total de pares: " +tpar+ "<br>");
+	document.write("Total de impares: " +timpar);
+	
+</script>

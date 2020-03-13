@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+/*07. Faça um programa que receba a idade de várias pessoas e retorne: 
+a. O total de pessoas com menos de 21 anos 
+b. Total de pessoas com mais de 50 anos.  math.factorial(n)
+*/
+
+var idade, menor20, maior50;
+
+	idade = 0;
+	menor20 = 0;
+	maior50 = 0;
+	
+	do { 
+	
+		idade = parseInt(prompt("Informe a idade da pessoa ou digite 0 (zero) para sair"));
+	
+		if (idade < 21) { 
+			menor20++ 
+		}
+		if (idade > 50){ 
+			maior50++ 
+		}
+	} while (idade != 0)
+	
+	document.write("O total de pessoas com menos de 21 anos é: "+ menor20);
+	document.write("<br>O total de pessoas com mais de 50 anos é: "+ maior50);
+
+ </script>

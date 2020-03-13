@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+/*
+2. Faça um programa/script que receba um determinado número 
+do usuário e retorne todos os números pares e
+ímpares menores que o número informado pelo usuário. 
+Utilize duas funções: par() e impar().
+*/
+/*
+if (raio === undefined)
+raio = 0; para a função nao quebrar caso não venha valores de fora.
+*/
+	function par(num){
+		document.write('Os números Pares são <br>')
+		for (var i = num; i >= 0; i--){
+			if (i % 2 == 0){
+				document.write(i+', ');
+			}
+		}
+	}
+	
+	function impar(num){
+		document.write('Os números Ímpares são <br>')
+		for (var i = num; i >= 0; i--){
+			if (i % 2 == 1){
+				document.write(i+', ');
+			}
+		}
+	}
+	
+	var num = prompt('Informe um número');
+	
+	par(num);
+	document.write('<br>');
+	impar(num);
+</script>

@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+	var sal, reaj, salfinal;
+	
+	sal = prompt("Informe o salário do funcionário: "); //pode usar o parseFloat só aqui > parseFloat(prompt...)
+	
+	reaj = (sal*0.128);
+	
+	salfinal=parseFloat(sal)+parseFloat(reaj); // salfinal=sal+reaj; > concatena ao invés de somar
+	
+	
+	document.write("O reajuste é de: "+reaj.toFixed(2)+"<br>"); //.toFixed //determinar a qdte de casas decimais
+	document.write("O salário reajustado é de: R$ "+salfinal.toFixed(2));
+</script>
+
+	

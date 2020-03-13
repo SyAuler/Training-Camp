@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+
+/*04. Faça um programa que leia um número que será o limite inferior de um intervalo 
+e retorne todos os números ímpares menores do que esse número.  
+Exemplo: Limite Superior: 15         Saída: 1 – 3 – 5 – 7- 9 – 11 – 13
+ 
+*/
+
+	var n, lim
+
+		lim = parseInt(prompt("Informe um número até 100"));
+	
+		for(n = 1; n <= lim; n++) {  /* n++ incrementa um valor ao valor atual*/
+			if (n < lim) {
+				if (n % 2 == 1) {
+					document.write("O número ímpar é: "+n+"<br>");
+				}
+			} else {
+				break;
+			}
+		}
+		
+		
+</script>

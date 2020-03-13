@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+<script>
+		
+	var pacientes=[],nome, perg, i;
+	
+	perg='s';
+	
+	while (perg=='s') {
+		nome=prompt("Informe o nome do paciente: ");
+		pacientes.push(nome); // push() adiciona um elemento no final do vetor
+		
+		perg=prompt("Deseja inserir novo paciente? (s/n) ");
+	}
+	/*
+	for (i=0; i < pacientes.length; i++){ // .length retorna o tamanho do vetor
+		document.write((i+1)+': '+pacientes[i]+'<br>');
+	}
+
+	document.write('<br> <br> Teste do método/função unshift <br>');
+	pacientes.unshift('teste'); // adicina um elemento, neste caso a palavra 'teste' no início do vetor
+	//e desloca os elementos uma posição abaixo/esquerda
+	
+	for (i=0; i < pacientes.length; i++){
+		document.write((i+1)+': '+pacientes[i]+'<br>');
+	}
+	
+
+	document.write('<br> <br> Teste do método/função pop <br>');
+	pacientes.pop(); // remove o último elemento do vetor
+	
+	for (i=0; i < pacientes.length; i++){
+		document.write((i+1)+': '+pacientes[i]+'<br>');
+	}
+	
+	
+	document.write('<br> <br> Teste do método/função shift <br>');
+	pacientes.shift(); // remove o primeiro elemento do vetor e desloca os elementos uma posição para cima/direita
+	
+	for (i=0; i < pacientes.length; i++){
+		document.write((i+1)+': '+pacientes[i]+'<br>');
+	}
+	
+	
+	// verificando o tamanho do vetor
+	document.write('<br> O vetor possui: '+pacientes.length+' elementos');
+	
+	
+	*/
+	
+	// Exibindo itens do vetor usando join
+	document.write('<br><br> Valores do vetor: [ '+pacientes.join()+']');
+
+	/*
+
+	// localizando elmentos no vetor
+	
+	document.write('A letra b está na posição '+pacientes.indexOf('b')+' do vetor'); // retorna posição 1 - a busca ocorre do início para o final do vetor 
+	document.write('A letra b está na posição '+pacientes.lastIndexOf('b')+' do vetor'); // retorna posição 4 - a busca ocorre do final para o início do vetor
+	 
+	//gerando um número aleatório de 1 a 100
+	
+	
+	
+	var num = Math.floor(Math.random()*10)+1;
+	
+	document.write('O número sorteado foi: '+num);
+	
+	*/
+		
+</script>

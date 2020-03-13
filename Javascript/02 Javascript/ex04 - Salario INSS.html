@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+
+/*4- Faça um fluxograma que receba o salário bruto de um funcionário 
+e calcule o valor do INSS - 5%, do IR-7% e do Auxílio Alimentação-8% 
+e informe os valores de cada um destes impostos/benefícios bem como o salário líquido. 
+*/
+	var salario_bruto
+	
+		document.write("Calculando o valor total do salário de um funcionário. <br><br>");
+		
+		salario_bruto = parseFloat(prompt("Informe o salário bruto do funcionário : "));
+	
+		INSS = (salario_bruto * 5) /100;
+		IR = (salario_bruto * 7) /100;
+		ax_alimentacao = (salario_bruto + 8) /100;
+		
+		salario_liquido = (((salario_bruto - INSS) - IR) + ax_alimentacao);
+		
+		document.write("Salario bruto: "+salario_bruto+'<br>');
+		document.write("<br> INSS: "+INSS+ '<br>');
+		document.write("<br> IR: "+IR+ '<br>');
+		document.write("<br> Auxílio alimentação: "+ax_alimentacao+ '<br>');
+		document.write("<br> Salário Líquido: "+salario_liquido+ '<br>');
+
+</script>

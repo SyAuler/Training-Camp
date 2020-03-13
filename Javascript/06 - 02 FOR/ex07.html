@@ -1,0 +1,43 @@
+<meta charset = "UTF-8">
+<script>/* 07. Em um campeonato de futebol existem 5 times e cada um possui 11 jogadores.
+Faça um programa que receba a idade, o peso e a altura de cada um dos jogadores,
+calcule e mostre:
+a. A quantidade total de jogadores do campeonato com idade inferior a 18 anos
+b. A média das idades dos jogadores de cada time
+c. A média das alturas de todos os jogadores do campeonato
+d. O percentual de jogadores com mais de 80 kilos entre todos os jogadores do campeonato. */
+var qtdeJogadoresObesos, qtdeJogadoresTotal, qtdeJogadoesIdadeMenor18, alturaTodosJogadores
+var time, jogador
+var mediaIdadePorTime, idadeTotalDoTime, 
+
+qtdeJogadoresObesos =0;
+qtdeJogadoresTotal = 0;
+qtdeJogadoesIdadeMenor18 = 0;
+alturaTodosJogadores = 0;
+for (time = 0; time < 5; time++) {
+	mediaIdadePorTime = 0;
+	idadeTotalDoTime = 0;
+
+	for (jogador = 0; jogador < 11; jogador++) {
+		idade = parseInt(prompt("Informe a idade do jogador "+(jogador+1)+" do time " + (time+1) ));
+		idadeTotalDoTime = idadeTotalDoTime + idade;
+		if (idade < 18) {
+			qtdeJogadoesIdadeMenor18++;
+		}
+		qtdeJogadoresTotal++;
+		altura = parseFloat(prompt("Informe a altura do jogador "+(jogador+1)+" do time " + (time+1)));
+		alturaTodosJogadores = alturaTodosJogadores + altura; 
+		
+		peso = parseFloat(prompt("Informe a peso do jogador "+(jogador+1)+" do time " + (time+1)));
+		if (peso > 80) {
+			qtdeJogadoresObesos++;
+		}
+	}
+	mediaIdadePorTime = idadeTotalDoTime / jogador;
+	document.write("<br>A média das idades dos jogadores do time " + (time+1) + " é " + mediaIdadePorTime);
+} 
+document.write("<br>A quandidade de jogadores menores de 18 anos é " + qtdeJogadoesIdadeMenor18);
+document.write("<br>A média das alturas de todos os jogadores do campeonato é " + (alturaTodosJogadores / qtdeJogadoresTotal).toFixed(2));	
+document.write("<br>O percentual de jogadores com mais de 80 kilos entre todos os jogadores do campeonato é " + (qtdeJogadoresObesos / qtdeJogadoresTotal * 100) + "%");	
+	
+</script>

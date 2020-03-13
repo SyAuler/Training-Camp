@@ -1,0 +1,18 @@
+﻿<meta charset="UTF-8">
+
+<script>
+
+	var nPrest, qtdePrestPg, valorPrest, totalPg, saldoDev, totalCon
+	
+		nPrest = parseInt(prompt("Informe o nº total de prestações"));
+		qtdePrestPg = parseInt(prompt("Informe a quantidade de prestações pagas"));
+		valorPrest = parseInt(prompt("Informe o valor atual das prestações"));
+	
+		totalPg = qtdePrestPg * valorPrest;
+		totalCon = nPrest * valorPrest;
+		saldoDev = totalCon - totalPg;
+	
+		document.write("<br><br>O saldo devedor é: " +saldoDev);
+		document.write("<br><br>O total pago é: " +totalPg);
+	
+</script>

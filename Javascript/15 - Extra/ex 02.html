@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<script>
+/*
+2. Faça um programa que preencha dois vetores, X e Y, com dez números inteiros cada.
+Calcule e mostre os seguintes vetores resultantes:
+a. A união de X com Y (todos os elementos de x e de y sem repetições)
+b. A diferença entre X e Y (todos os elementos de x que não existam em Y, sem
+repetições)
+c. A soma entre X e Y (soma de cada elemento de x com o elemento de mesma posição
+em Y)
+d. O produto de X e Y (multiplicação de cada elemento de x com o elemento de mesma
+posição em Y)
+e. A interseção entre X e Y (apenas os elementos que aparecem nos dois vetores, sem
+repetições) 
+*/
+
+	var x=[], y=[], cont, uniao, result=[], i, j;
+	
+	linha=2;
+	
+	for (i=0; i < linha; i++){
+		x[i] = prompt('Informe 10 números inteiros de X - '+i);
+	}
+	for (i=0; i < linha; i++){
+		y[i] = prompt('Informe 10 números inteiros de X - '+i);
+	}
+	
+	for (i=0; i < linha; i++){
+		document.write('Os números de X são '+x[i]+'<br>');
+	}
+	for (i=0; i < linha; i++){
+		document.write('Os números de Y são '+y[i]+'<br>');
+	}
+
+	//Letra A, numeros distintos
+	if (true) { 
+		for (i=0; i < linha; i++){
+			achou = false;
+			for (j=0; j < result.length; j++){
+				if (x[i] == result[j]) {
+					achou = true;
+				}
+			}
+			if ((achou == false) || (result.length == 0)) {
+				result[result.length] = x[i];
+			}
+		}
+		for (i=0; i < linha; i++){
+			achou = false;
+			for (j=0; j < result.length; j++){
+				if (y[i] == result[j]) {
+					achou = true;
+				}
+			}
+			if ((achou == false) || (result.length == 0)) {
+				result[result.length] = y[i];
+			}
+		}
+	
+		document.write('Os números unicos SAO: <br>');
+		for (i=0; i < result.length; i++){
+			document.write(result[i]+'<br>');	
+		}
+	}	
+	//uniao = x.concat(y);
+	//}
+	//document.write('<br>A união dos números é '+uniao+'<br>');
+	
+	//Letra D
+	for (i=0; i < linha; i++){
+		document.write('O valor de X ('+x[i]+') * Y ('+y[i]+') é = '+(x[i]*y[i])+'<br>');
+	}
+	
+
+</script>

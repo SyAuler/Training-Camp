@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<script>
+/*3. Implemente uma função que receba um intervalo [a, b] qualquer, 
+e utilizando as funções par() e impar() retorne a lista de números 
+pares e ímpares do intervalo informado pelo usuário. 
+*/
+
+	function par(int1, int2){
+		var pares=[];
+		for (i = int1; i <= int2; i++){
+			if (i % 2 == 0){
+				pares.push(i);
+			}
+		}
+		return pares;
+	}
+	
+	function impar(int1, int2){
+		var impares=[];
+		for (i = int1; i<= int2; i++){
+			if (i % 2 == 1){
+				impares.push(i);
+			}
+		}
+		return impares;
+	}
+	
+	var int1 = prompt('Informe o primeiro número');
+	var int2 = prompt('Informe o segundo número');
+	
+	if (int1 > int2){
+		var aux = int1;
+		int1 = int2;
+		int2 = aux;
+	}
+	
+	document.write('Os intervalos são '+int1 +' e ' +int2 +'<br><br>');
+	document.write('Os números pares são '+par(int1, int2)+'<br>');
+	document.write('Os números ímpares são '+impar(int1, int2));
+
+</script>

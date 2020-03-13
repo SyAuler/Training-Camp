@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+/*
+2- Faça um programa que receba um anúncio e informe o
+número de palavras do mesmo.
+*/
+
+var frase, num, tam, i;
+
+	frase = prompt('Informe uma frase qualquer');
+	frase = frase.split(' ');
+	tam = frase.length;
+	
+	num=0;
+	for (i = 0; i < tam; i++){
+		num++;
+	}
+	document.write('A frase é '+frase+'<br>');
+	document.write('O número de palavras é '+num);
+</script>

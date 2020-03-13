@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+/* 02. Faça um programa que preencha um vetor com os modelos de cinco carros. 
+Carregue outro vetor com o consumo desses carros, isto é, 
+quantos quilômetros cada um deles faz com um litro de combustível, 
+calcule e mostre: 
+a) quantos litros de combustível cada um dos carros cadastrados 
+ consome para percorrer uma distância de 1.000 quilômetros. 
+b) o modelo do carro mais econômico 
+*/
+
+var qtdeCarros;
+var cont, distancia, mais_economico, economico;
+var modelo=[], consumo=[], km=[];
+
+	qtdeCarros = 5;
+	distancia = 1000;
+
+	for (cont = 1; cont <= qtdeCarros; cont++) {
+		modelo[cont] = prompt("Informe o modelo do carro "+cont);
+		km[cont] = prompt("Informe quantos km o carro " +cont+ " faz com 1 litro");
+	
+		consumo[cont] = (distancia / km[cont]);
+	
+		document.write("O carro " +cont+ " gasta " +consumo[cont].toFixed(2)+ " litros para percorrer 1.000 Km<br>");
+		
+		if ((cont == 1) || (mais_economico > consumo[cont])) {
+			economico = cont;
+			mais_economico = consumo[cont];
+		}
+	}
+	
+	document.write("O carro mais economico é " +modelo[economico]);
+
+</script>

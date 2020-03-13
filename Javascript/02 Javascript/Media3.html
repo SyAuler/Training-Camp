@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+	var n1, n2, media;
+	
+	n1=parseFloat(prompt("Informe nota 1: "));
+	n2=parseFloat(prompt("Informe nota 2: "));
+	
+	media=(n1+n2)/2;
+	
+	document.write("A média é de: "+media+"<br><br>");
+	
+	if((media >= 4) && (media < 7)){
+		document.write("Exame");
+	}
+	if(media < 4){
+		document.write("Reprovado");
+	}
+	if(media >= 7){
+		document.write("Aprovado");
+	}
+</script>

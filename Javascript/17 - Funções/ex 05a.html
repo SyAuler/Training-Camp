@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+/*
+5. Descubra quantos dias seus amigos já viveram e quantas vezes 
+seu coração já bateu. Use no mínimo duas funções do seu programa. 
+
+ Função calculaDiasDeVida(idade) 
+o diasVividos= (anos*365)+(meses*30)+diasV; 
+
+ Função calculaBatimentos(diasVividos); 
+o Batimentos= diasVividos * 24 horas * 60 minutos * 80 batimentos cardíacos. 
+*/
+
+function calculaDiasDeVida(ano, mes, dia){ 
+	var hoje = new Date();
+	var nascimento = new Date(ano, mes, dia);
+	return ( hoje.getTime() - nascimento.getTime() ) / 86400000;
+}
+
+function calculaBatimentos(diasVividos){ 
+	var batimentos= diasVividos * 24 * 60 * 80; //horas, minutos, batimentos
+	return batimentos;
+}
+
+var data = prompt('Informe a data de seu nascimento (dd-mm-aaaa)');
+var nasc = data.split('-');
+var dias = calculaDiasDeVida(nasc[2], nasc[1], nasc[0]);
+
+document.write('Seu amigo tem '+dias+'<br>');
+document.write('Seu amigo tem batimentos: '+ calculaBatimentos( dias ) );
+
+</script>
+

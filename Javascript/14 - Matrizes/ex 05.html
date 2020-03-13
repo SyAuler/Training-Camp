@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script>
+/*
+5. Faça um programa que receba a nota final de 10 alunos em 4 disciplinas diferentes. Ao
+final, o programa deve apresentar a média geral de cada disciplina.
+*/
+
+	var matriz=[], i, j, linhas, colunas, cont, disciplinas, soma, media;
+	i=0;
+	j=0;
+	linhas=2;
+	colunas=3;
+	disciplinas=4;
+	
+	for (i=0; i < linhas; i++){
+		matriz[i]=[];
+		for (j=0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+
+		for (i=0; i < linhas; i++){
+			matriz[i][0] = prompt('Informe o nome da '+(i+1)+'a. disciplina');
+			for (j=1; j <=(colunas-1); j++){
+				matriz[i][j] = prompt('Informe a nota do '+(j)+'o. aluno na disciplina');
+			}
+		}
+		media=0;
+		soma=0;
+		for (i=0; i < linhas; i++){
+			for (j=1; j <=(colunas-1); j++){
+				soma = parseInt(soma) + parseInt(matriz[i][j]);
+				matriz[i][3] = (soma/2);
+			}				
+			soma = 0;
+		} 
+		//exibindo disciplinas e notas
+		for (i=0; i < linhas; i++){
+			document.write('<br><br> Notas da disciplina:  '+matriz[i][0]);
+			for (j=1; j <=(colunas-1); j++){
+				document.write('<br> aluno '+j+ ': '+ matriz[i][j]);
+			}
+			document.write('<br>media: '+matriz[i][3]+'<br>');
+		}
+			
+
+</script>

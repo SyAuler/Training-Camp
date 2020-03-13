@@ -1,0 +1,664 @@
+﻿<meta charset="UTF-8">
+<script>
+/* 01. Faça um programa para controlar o estoque 
+e calcular o total de vendas diárias de uma determinada empresa. 
+a) O usuário deve lançar o estoque de cada um dos 5 produtos; 
+b) O usuário deve lançar o valor unitário de cada produto; 
+c) O usuário deve lançar a quantidade vendida de cada produto no dia; 
+d) O programa deve exibir um relatório apresentando o faturamento diário geral 
+e o estoque atual de cada produto. 
+*/
+
+var cont, faturamento, qtprod, estoqueAtual;
+var produto=[], estoque=[], valorUn=[], qtdeVendida=[];
+
+faturamento = 0;
+estoqueAtual = 0;
+
+for (cont=1; cont <= 5; cont++){
+	produto[cont - 1] = prompt("Informe o nome do produto "+cont);
+
+	estoque[cont - 1] = prompt("Informe o estoque do produto "+cont);
+
+	valorUn[cont - 1] = prompt("Informe o valor unitário do produto "+cont);
+	
+	qtdeVendida[cont - 1] = prompt("Informe a quantidade vendida do produto "+cont);
+}
+for (cont=1; cont <= 5; cont++){
+	faturamento = faturamento + (valorUn[cont - 1] * qtdeVendida[cont - 1]);
+	
+	estoqueAtual = (estoque[cont - 1] - qtdeVendida[cont - 1]);
+	
+	document.write("O estoque atual do item "+cont+ " é "+estoqueAtual+"<br>");
+}
+
+document.write("<br>O faturamento diário é R$ "+faturamento.toFixed(2)+" reais <br>");
+
+</script>
+
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+/* 02. Faça um programa que preencha um vetor com os modelos de cinco carros. 
+Carregue outro vetor com o consumo desses carros, isto é, 
+quantos quilômetros cada um deles faz com um litro de combustível, 
+calcule e mostre: 
+a) quantos litros de combustível cada um dos carros cadastrados 
+ consome para percorrer uma distância de 1.000 quilômetros. 
+b) o modelo do carro mais econômico 
+*/
+
+var qtdeCarros;
+var cont, distancia, mais_economico, economico;
+var modelo=[], consumo=[], km=[];
+
+	qtdeCarros = 5;
+	distancia = 1000;
+
+	for (cont = 1; cont <= qtdeCarros; cont++) {
+		modelo[cont] = prompt("Informe o modelo do carro "+cont);
+		km[cont] = prompt("Informe quantos km o carro " +cont+ " faz com 1 litro");
+	
+		consumo[cont] = (distancia / km[cont]);
+	
+		document.write("O carro " +cont+ " gasta " +consumo[cont].toFixed(2)+ " litros para percorrer 1.000 Km<br>");
+		
+		if ((cont == 1) || (mais_economico > consumo[cont])) {
+			economico = cont;
+			mais_economico = consumo[cont];
+		}
+	}
+	
+	document.write("O carro mais economico é " +modelo[economico]);
+
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+/*03. Faça um programa que preencha um vetor com 10 números inteiros, 
+calcule e mostre os números superiores a cinquenta e suas respectivas posições. 
+O programa deverá mostrar a mensagem se não existir nenhum número nessa condição 
+*/
+
+var cont, result;
+var num=[];
+	
+	
+	for (cont = 1; cont <= 10; cont++) {
+		num = prompt("Informe 10 número: " +cont+ " de 10");
+	
+	if (num > 50) {
+		result = num;	
+		document.write("O número maior que 50 é: "+result+" e sua posição é: "+cont+"<br>");
+	} else {
+		document.write("Não existem números maiores que 50 <br>");
+	}
+	}
+
+</script>
+-------------------------------------------------------------------------------------
+MATRIZES
+<meta charset="utf-8">
+<script>
+/*
+01. Faça um programa que solicite e depois exiba o código
+do cliente e o valor das 3 últimas compras do respectivo
+cliente.
+- Considere uma lista de 3 clientes para o teste.
+*/
+
+var matriz=[], i, j, cont, linhas, colunas, cliente;
+	i=0;
+	j=0;
+	cont=3;
+	linhas=3;
+	colunas=4;
+	
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j< colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i = 0; i < linhas; i++){
+		matriz[i][j] = prompt("Informe o código do cliente");
+		for (j = 1; j < colunas; j++){
+			matriz[i][j] = prompt("Informe o valor das últimas 3 compras do cliente: "+(j)+" compra de 3");
+		}
+	}
+	for (i = 0; i < linhas; i++){
+		document.write("<b>Compras do cliente "+matriz[i][j]+" </b><br> ");
+		for (j = 1; j < colunas; j++){
+			document.write("Compra "+[j]+" = "+matriz[i][j]+" <br> ");
+		}
+		document.write("<br>")
+	}
+	
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+02. Faça um programa que preencha uma matriz M(2x2), 
+calcule e mostre a matriz R, resultante da multiplicação dos 
+elementos de M pelo seu maior elemento.
+*/
+ 
+	var matriz=[], i, j, linhas, colunas, maior, result;
+	linhas = 2;
+	colunas = 2;
+	maior = 0;
+	
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j< colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i = 0; i < linhas; i++){
+		for (j = 0; j < colunas; j++){
+			matriz[i][j] = prompt("Informe um valor");	
+		
+			if ( matriz[i][j] > maior){
+				maior = matriz[i][j]
+			}	
+		}
+	}
+	document.write("O maior valor é: "+maior+"<br>");
+	
+	for (i = 0; i < linhas; i++){
+		for (j = 0; j < colunas; j++){
+			result = matriz[i][j] * maior
+			document.write("O número é "+matriz[i][j]+" e o resultado da linha "+i+" e da coluna "+j+" é: = "+result+"<br>");
+		}
+	}
+	
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+2. Faça um programa que preencha e leia uma matriz 3 x 3, conte e informe quantos valores
+maiores que 10 ela possui, ou retorne uma mensagem de “não encontrado”, caso não
+existam valores maiores do que 10.
+*/
+	var matriz=[], i, j, linhas, colunas, maior, cont;
+	cont=0;
+	maior = 10;
+	linhas = 3;
+	colunas = 3;
+	//criando a matriz
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	//preenchendo a matriz
+	for (i = 0; i < linhas; i++) {
+		for (j = 0; j < colunas; j++) {
+			matriz[i][j] = prompt("Informe os números aleatórios ");
+		}
+	}
+	//exibindo a matriz
+	for (i = 0; i < linhas; i++) {
+		for (j = 0; j < colunas; j++) {
+			document.write('matriz['+i+']['+j+'] = '+matriz[i][j]+'<br>');
+		}
+	}
+	//contando números maiores do que 10
+	for (i = 0; i < linhas; i++) {
+		for (j = 0; j < colunas; j++) {
+			if(matriz[i][j] > maior){
+				cont=cont+1;
+			}
+		}
+	}
+	if(cont==0){
+		document.write("Não existem números maiores do que 10");
+	}
+	if(cont>0){
+		document.write("Foram localizados "+cont+" números maiores do que 10");
+	}
+				
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+3. Faça um programa em que o usuário preencha uma matriz de 4x5 e calcule e exiba a
+soma de todos os elementos da matriz.
+*/
+
+	var matriz=[], i, j, linhas, colunas, soma;
+	soma=0;
+	linhas=5;
+	colunas=4;
+	
+	for (i=0; i < linhas; i++){
+		matriz[i]=[];
+		for (j=0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i=0; i < linhas; i++){
+		for (j=0; j < colunas; j++){
+			matriz[i][j]=parseInt(prompt("Informe números aleatórios"));
+			soma =(soma + matriz[i][j]);
+		}
+	}
+	
+	document.write("A soma dos valores da matriz é "+soma);
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+4. Faça um programa que leia uma matriz 3 x 3. Leia também um valor X. O programa
+deverá fazer uma busca desse valor na matriz e, ao final, escrever a localização (linha e
+coluna) ou uma mensagem de “não encontrado”.
+*/
+	var matriz=[], i, j, linhas, colunas, result;
+	
+	linhas=3;
+	colunas=3;
+	
+	for (i=0; i < linhas; i++){
+		matriz[i]=[];
+		for (j=0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i=0; i < linhas; i++){
+		for ( j=0; j < colunas; j++){
+			result = Math.floor(Math.random() * 100);
+		}
+	}
+	document.write("A linha é " +i+"<br>");
+	document.write("A coluna é " +j+"<br>");
+	document.write("O resultado é " +result);
+
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+5. Faça um programa que receba a nota final de 10 alunos em 4 disciplinas diferentes. Ao
+final, o programa deve apresentar a média geral de cada disciplina.
+*/
+
+	var matriz=[], i, j, linhas, colunas, cont, disciplinas, soma, media;
+	i=0;
+	j=0;
+	linhas=2;
+	colunas=3;
+	disciplinas=4;
+	
+	for (i=0; i < linhas; i++){
+		matriz[i]=[];
+		for (j=0; j < colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+
+		for (i=0; i < linhas; i++){
+			matriz[i][0] = prompt('Informe o nome da '+(i+1)+'a. disciplina');
+			for (j=1; j <=(colunas-1); j++){
+				matriz[i][j] = prompt('Informe a nota do '+(j)+'o. aluno na disciplina');
+			}
+		}
+		media=0;
+		soma=0;
+		for (i=0; i < linhas; i++){
+			for (j=1; j <=(colunas-1); j++){
+				soma = parseInt(soma) + parseInt(matriz[i][j]);
+				matriz[i][3] = (soma/2);
+			}				
+			soma = 0;
+		} 
+		//exibindo disciplinas e notas
+		for (i=0; i < linhas; i++){
+			document.write('<br><br> Notas da disciplina:  '+matriz[i][0]);
+			for (j=1; j <=(colunas-1); j++){
+				document.write('<br> aluno '+j+ ': '+ matriz[i][j]);
+			}
+			document.write('<br>media: '+matriz[i][3]+'<br>');
+		}
+		
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+5.a. Faça um programa que receba a nota final de 10 alunos em 4 disciplinas diferentes. Ao
+final, o programa deve apresentar a média geral de cada disciplina.
+*/
+	var qtdeAlunos = 10;
+	var qtdeDisciplinas = 4;
+	var disciplina = 0;
+	var media = 1;
+	var nota = 2;
+	var soma = 3;
+	
+	//
+	var disciplinas = new Array(qtdeDisciplinas);
+	var medias = new Array(qtdeDisciplinas);
+	var somas = new Array(qtdeDisciplinas);
+	var matriz = new Array(qtdeDisciplinas);
+	var notas = new Array(qtdeAlunos);
+	
+	//monta a matriz inserindo um array por linha
+	for (i = 0; i < qtdeDisciplinas; i++) {
+		matriz[i] = new Array(4);
+		matriz[i][disciplina] = disciplinas;
+		matriz[i][media] = medias;
+		matriz[i][soma] = somas;
+		matriz[i][nota] = notas;
+	}	
+
+	for (i = 0; i <	qtdeDisciplinas; i++) {
+		matriz[i][soma] = 0;
+		matriz[i][disciplina] = prompt('Informe o nome da disciplina');
+		for (j = 0; j < qtdeAlunos; j++) {
+			matriz[i][nota][j] = parseInt(prompt('Informe a nota do aluno ' +j+ ' da disciplina ' +matriz[i][disciplina]));
+			matriz[i][soma] = (matriz[i][soma] + matriz[i][nota][j]);
+		}
+		matriz[i][media] = matriz[i][soma] / qtdeAlunos;
+	}
+	
+	for (i = 0; i <	qtdeDisciplinas; i++) {
+		document.write('<br>A média da disciplina '+matriz[i][disciplina]+' é '+matriz[i][media]+'<br>');
+	}
+
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+
+/*
+6. Faça um programa que preencha uma matriz de 10x3 com as notas de dez alunos em 3 provas. 
+O programa deverá mostrar um relatório com o número dos alunos (número da linha) e 
+a prova em que cada aluno obteve a menor prova.  Ao final, o relatório deverá mostrar 
+quantos alunos tiveram a menor nota em cada uma das provas (prova1, prova2 e na prova3). 
+*/
+
+var alunos = 2;
+var colunas = 2;
+var posAluno = 0;
+var posProvas = 1;
+var qtdeProvas= 3;
+
+var matriz = new Array(alunos);
+var matrizDois = new Array(qtdeProvas);
+
+
+	//Cria a matriz de alunos
+	for (i=0; i < alunos; i++){
+		
+		//Cria uma array de duas posicoes
+		matriz[i] = new Array(colunas);
+		
+		//Posicao UM da matriz de alunos, seta o nome do aluno
+		matriz[i][posAluno] = prompt('Informe o nome do aluno '+(i+1));	
+		
+		//Posicao DOIS da matriz de alunos, seta um novo array para as notas
+		matriz[i][posProvas] = new Array(qtdeProvas);
+		
+		//Informa as 3 notas de cada aluno, dentro do array de notas, dentro da matriz..
+		for (j=0; j < qtdeProvas; j++) {
+			matriz[i][posProvas][j] = parseInt(prompt('Informe a nota '+(j+1)+' do nome do aluno '+(i+1)));
+		}
+	}
+	
+	//varrer a matriz, resolve a QUESTA A
+	for (i=0; i < alunos; i++){
+	
+		//varre as notas
+		for (j=0; j < qtdeProvas; j++) {
+		
+			//ser for a primeira nota, ou se é a menor nota entra no IF e altera o valor de menorNota
+			if ((j==0) || (menorNota > matriz[i][posProvas][j])) {
+				menorNota = matriz[i][posProvas][j];
+				posMenorNota = j+1;
+			}
+		}
+		
+		//imprime os valores do resultado
+		document.write('<br>A menor nota do aluno '+(matriz[i][posAluno])+' é '+menorNota+' LINHA: '+(i+1)+' PROVA: '+(posMenorNota)+'<br>');
+	}
+	
+	//varrer a matriz, resolve a QUESTA B
+	for (j=0; j < qtdeProvas; j++) {
+		for (i=0; i < alunos; i++){
+			if ((i==0) || (menorNotaProva > matriz[i][posProvas][j])) {
+				menorNotaProva = matriz[i][posProvas][j];
+				posMenorNotaProva = j+1;
+				qtdeAlunosComMesmaNota = 1;
+			} else if (menorNotaProva == matriz[i][posProvas][j]) {
+				qtdeAlunosComMesmaNota++;
+			}
+		}
+		
+		//imprime os valores do resultado
+		document.write('<br>A menor nota da prova '+(j+1)+' é '+menorNotaProva+' e o numero de alunos com a mesma NOTA é: '+(qtdeAlunosComMesmaNota)+'<br>');
+	}
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+
+/*
+7. Faça um programa capaz de armazenar a quantidade de 5 produtos que estão armazenados 
+em 3 armazéns diferentes de uma companhia. Ao final, o programa deve informar: 
+a. A quantidade total de cada produto (em todos os armazéns); 
+b. A quantidade total de cada armazém ( de todos os produtos). 
+*/
+
+var armazem=[], i, j, estoque;
+
+linhas = 3;
+colunas = 5;
+posArmazem = 0;
+posProduto = 1;
+posEstoque = 2;
+
+for (i=0; i < linhas; i++){
+	armazem[i] = []
+	armazem[i][posArmazem] = prompt('Informe o armazem');
+
+	armazem[i][posProduto] = []
+	armazem[i][posEstoque] = [] 
+	
+	for (j=0; j < colunas; j++){
+		armazem[i][posProduto][j] = prompt('Informe o nome do produto '+j);
+		armazem[i][posEstoque][j] = prompt('Informe o estoque do produto '+j); 
+	}
+}
+for (i=0; i < linhas; i++){
+	document.write('Armazém '+armazem[i][posArmazem]+'<br>');
+	estoque = 0;
+	
+	for (j=0; j < colunas; j++){
+		document.write('O produto é '+armazem[i][posProduto][j]+'. ');
+		document.write('O estoque é '+armazem[i][posEstoque][j]+'<br>');
+		estoque = (estoque + parseInt(armazem[i][posEstoque][j]));
+	}
+	document.write('Total de produtos '+estoque+'<br>');
+}
+
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="utf-8">
+<script>
+/*
+02. Faça um programa que preencha uma matriz M(2x2), 
+calcule e mostre a matriz R, resultante da multiplicação dos 
+elementos de M pelo seu maior elemento.
+*/
+	var matriz=[], i, j, linhas, colunas, maior, result;
+	linhas = 2;
+	colunas = 2;
+	maior = 0;
+	
+	for (i = 0; i < linhas; i++){
+		matriz[i]=[];
+		for (j = 0; j< colunas; j++){
+			matriz[i][j]="";
+		}
+	}
+	for (i = 0; i < linhas; i++){
+		for (j = 0; j < colunas; j++){
+			matriz[i][j] = prompt("Informe um valor");	
+		
+			if ( matriz[i][j] > maior){
+				maior = matriz[i][j]
+			}	
+		}
+	}
+	document.write("O maior valor é: "+maior+"<br>");
+	
+	for (i = 0; i < linhas; i++){
+		for (j = 0; j < colunas; j++){
+			result = matriz[i][j] * maior
+			document.write("O número é "+matriz[i][j]+" e o resultado da linha "+i+" e da coluna "+j+" é: = "+result+"<br>");
+		}
+	}
+	
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+
+/*Jogo Adivinhar Número
+*/
+
+var	ganhou=false
+var numeroUnico, mensagem, erros=0;
+var cont, contUnico, qtdeChances, numero, numeroUnico;
+var chances=[], numerosIncorretos=[]
+
+	mensagem = "";
+	qtdeChances = parseInt(prompt("Informe a quantidade de chances"));
+	numeroSorteado = Math.floor((Math.random() * 100) + 1);
+	
+	for (cont = 1; cont <= qtdeChances; cont++){
+		while (true) {
+			numero = parseInt(prompt("Informe um número: Chance "+cont+" de "+qtdeChances + ' ' + mensagem));
+			if ((numero > 0) && (numero <= 100)) {
+				numeroUnico = true;
+				
+				//Percorre o array para ver se já não foi incluido	
+				for (contUnico = 1; contUnico <= qtdeChances; contUnico++){
+					if (numero == chances[contUnico]) {
+						numeroUnico = false;	
+					}	
+				}
+				
+				//se não achou na lista adiciona ao array
+				if (numeroUnico) {
+					mensagem = "";
+					chances[cont] = numero;
+					
+					if (numero == numeroSorteado) {
+						ganhou = true;
+					}
+					
+					//sair dor while, por que número é valido
+					break; 
+				} else {
+					numerosIncorretos[erros++] = numero;
+					mensagem = mensagem + " (O número: "+numero+" já foi informado)";
+				}
+			} else {
+				numerosIncorretos[erros++] = numero;
+				mensagem = mensagem + " (Número precisa ser maior que 0 e menor igual a 100)";
+			}
+		}
+		
+		//sair do for por que ganhou
+		if (ganhou) { 
+			break;
+		}
+	}
+	
+	if (ganhou) {
+		msgGanhou = 'PARABENS vc Acertou!!!';
+	} else {
+		msgGanhou = 'Suas chances acabaram! GAMER OVER!!!';
+	}
+	msgGanhou = msgGanhou + " O número sorteado foi " + numeroSorteado;
+	msgGanhou = msgGanhou + " Chance utilizadas foram" + qtdeChances;
+	msgGanhou = msgGanhou + " Total de Erros " + erros;
+	if (erros > 0) {
+		msgGanhou = msgGanhou + " Eles foram: " + numerosIncorretos.toString();
+	}
+	document.write('\n' + msgGanhou);
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+/*
+1. Faça um programa que preencha um vetor com 8 números inteiros, 
+calcule e mostre dois vetores resultantes. O primeiro vetor resultante
+deve conter números positivos, o segundo deve conter números negativos.
+Cada vetor resultante vai ter, no máximo 8 posições, que poderão
+não ser completamente utilizadas.
+*/
+	var cont, positivo, negativo;
+	var num=[], positivo=[], negativo=[];
+	
+	for (cont=0; cont < 8; cont++){
+		num[cont] = prompt('Informe números positivos e negativos. '+cont+ ' chance de 8 ');
+		
+		if (num[cont] > 0){
+			positivo[cont] = num[cont];			
+		} else {
+			negativo[cont] = num[cont];	
+		}
+	}
+	document.write('Os números positivos são '+positivo+ '<br>');
+	document.write('Os números negativos são '+negativo+ '<br>');		
+	
+</script>
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+/*
+3. Faça um programa que preencha um vetor com dez números inteiros, calcule e mostre o
+vetor resultante de uma ordenação decrescente.
+*/
+	var num=[], i, trocou, aux;
+	
+	linha=10;
+	
+	for (i=0; i < linha; i++){
+		num[i] = parseInt(prompt('Informe 10 números aleatórios '+i+' de 10'));
+	}
+	for (i=0; i < linha; i++){
+		document.write('Os números são '+num[i]+'<br>'); 		
+	}
+	while (true){
+		trocou = false;
+	
+		for (i=0; i < (linha-1); i++){
+			if (num[i] < num[i+1]){
+				trocou = true;
+				aux = num[i];
+				num[i] = num[i+1];
+				num[i+1] = aux;
+			}
+		}
+		if (trocou == false){
+			break;
+		}
+	}
+	for (i=0; i < (linha); i++){
+	document.write('A ordem decrescente é '+num[i]+'<br>'); 
+	}	
+</script>
+-------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
+

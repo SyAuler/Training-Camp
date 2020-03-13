@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+/*
+1- Faça um programa que receba uma frase, calcule e
+mostre a quantidade de vogais da frase digitada. O
+programa deverá contar vogais maiúsculas e minúsculas.
+- Dica:
+- Digitar uma frase;
+- Pegar o tamanho da frase;
+- Percorrer a frase, pegando caracter por caracter;
+- Comparar cada caracter com as vogais (maiúsculas e minúsculas);
+- Quando encontrar uma voga, acrescentar um na quantidade.
+*/
+
+var frase, qtde, tam, i;
+	
+	frase= prompt('Informe uma frase qualquer');
+	
+	frase= frase.toLowerCase();
+	tam=frase.length;
+	
+	qtde=0;
+	for (i=0; i < tam; i++){
+		if ((frase[i] == 'a') | (frase[i] == 'e') | (frase[i] == 'i') | (frase[i] == 'o') | (frase[i] == 'u')){
+			qtde=parseInt(qtde)+1;
+		}
+	}
+document.write('A frase é: '+frase+'<br>');
+document.write('Qtde de vogais '+qtde);
+
+</script>

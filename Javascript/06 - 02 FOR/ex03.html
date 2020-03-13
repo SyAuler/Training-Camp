@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+03. Sabendo-se que UAL (Unidade Lógica Aritmética) calcula o produto 
+através de somas sucessivas,
+crie um programa que calcule o produto de dois números inteiros lidos. 
+Suponha que os números lidos sejam positivos e
+que o multiplicando seja menor do que o multiplicador. Exemplo:
+Exemplo: 3 * 5 equivale a 3+3+3+3+3
+*/
+	var num1, num2, menor, maior, result;
+	
+		num1 = parseInt(prompt("Informe um número"));
+		num2 = parseInt(prompt("Informe outro número"));
+		
+			if (num1 < num2) {
+				menor = num1
+				maior = num2		
+				} else {
+					menor = num2
+					maior = num1
+				}
+			document.write("A multiplicação é "+menor+ " * " +maior+ " e equivale à: ");
+			
+		for (num = 1; num <= maior; num++) {
+				result = menor * maior
+				document.write(+menor+ "+");
+			} 
+		document.write("<br>A soma dos valores é: "+result);
+				
+</script>
+
+
+

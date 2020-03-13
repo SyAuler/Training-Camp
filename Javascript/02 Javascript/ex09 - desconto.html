@@ -1,0 +1,33 @@
+﻿<meta charset:"UTF-8">
+<script>
+
+/* 9- Uma empresa de vendas oferece para seus clientes um desconto 
+que leva em consideração o valor da compra do cliente. 
+Compras maiores ou iguais a R$ 5.000,00 recebem descontos de 20% 
+e compras menores que R$ 5.000,00 recebem descontos de 15%. 
+Faça um fluxograma que receba o valor compra 
+e informe o valor do desconto obtido e o valor da compra com desconto. */
+
+	var valor_compra, desc20, desc15, result
+
+		document.write("Calculando o desconto da compra");
+	
+		valor_compra = parseFloat(prompt("Informe o valor da compra"));
+		
+				
+		if (valor_compra >= 5000) {
+			desconto = (valor_compra * (20/100))
+		} else {
+			desconto = (valor_compra * (15/100))
+		}
+		
+		if (valor_compra >= 5000) {
+			result = parseFloat(valor_compra - desconto)
+		} else {
+			result = parseFloat(valor_compra - desconto)
+		}
+		
+		document.write("<br><br>O desconto é: ",desconto);
+		document.write("<br><br>O valor Total da venda é: " ,result);
+
+</script>

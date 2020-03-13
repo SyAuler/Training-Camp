@@ -1,0 +1,61 @@
+<meta charset"UTF-8">
+<script>
+
+/*
+03-Faça um programa que a partir da idade e peso do paciente calcule a dosagem de um
+determinado medicamento e imprima a receita informando a quantidade de gotas do
+medicamento que o paciente deve tomar por dose. Considere que o medicamento em
+questão possui 500mg por ml, e que cada ml corresponde a 20 gotas.
+
+a. Adultos ou adolescentes maiores de 12 anos, inclusive, se tiverem peso igual ou
+acima de 60 quilos devem tomar 1000mg; com peso abaixo de 60 quilos
+devem tomar 875mg
+
+b. Para crianças e adolescentes abaixo de 12 anos a dosagem é calculada pelo
+peso corpóreo conforme a tabela a seguir
+
+Peso - Dosagem
+5kg a 9kg - 125mg
+9.1kg a 16kg - 250mg
+16.1kg a 24kg - 375mg
+24.1kg a 30kg - 500mg
+Acima de 30 kg - 750mb
+
+*/
+
+	var idade, peso, gotas, mg
+	
+	document.write("Impressão da Receita");
+	
+	idade = parseInt(prompt("Informe a sua idade"));
+	peso = parseInt(prompt("Informe o seu peso"));
+	
+	
+	if (idade < 12) {
+		if ((peso >= 5) && (peso <= 9)) {
+			mg = 125;
+		}
+		if ((peso > 9) && (peso <= 16)) {
+			mg = 250;
+		}
+		if ((peso > 16) && (peso <= 24)) {
+			mg = 375;
+		}
+		if ((peso > 24) && (peso <= 30)) {
+			mg = 500;
+		}
+		if (peso > 30) {
+			mg = 750;
+		}
+	}	else {
+			if (peso >= 60) {
+				mg = 1000;
+			} else {
+				mg = 875;
+			}
+		}
+		gotas = mg / 500 * 20;
+		
+	document.write("<br><br>A quantidade de gotas que o paciente deve tomar é: " +gotas);
+	
+</script>

@@ -1,0 +1,77 @@
+<meta charset="UTF-8">
+<script>
+
+/*
+03. Faça um programa que receba vários números, calcule e mostre.
+a) A soma dos números digitados;
+b) A quantidade de números digitados;
+c) A média dos números digitados;
+d) O maior número digitado;
+e) O menor número digitado;
+f) A quantidade de números pares;
+g) A quantidade de números ímpares;
+h) A média dos números pares;
+Finalize a entrada dos dados com a digitação do número 30.000
+*/
+	var numDigitado, num, cont, soma, media, maior, menor, contPar, mediaPar, somaPar;
+	
+		cont = 0;
+		numDigitado = 0;
+		soma = 0;
+		media = 0;
+		maior = 0;
+		menor = 0;
+		contPar = 0;
+		contImpar = 0;
+		somaPar = 0;
+		mediaPar = 0;
+					
+		while (true) { /*while (num != 30000 ) {*/
+		
+			num = parseInt(prompt("Informe um número: "));
+			
+			if (num == 30000 ) {
+				break;
+			}
+			
+			numDigitado++; /*B*/
+			soma = soma + num; /* A*/
+			media = (soma / numDigitado).toFixed(2); /* C*/
+			
+			if (numDigitado == 1) {
+				maior = num;
+				menor = num;
+			}
+			if (maior < num) {/*D*/
+				maior = num;
+			}
+			if (menor > num) { /*E*/
+				menor = num;
+			}
+			
+			if (num % 2 == 0) { /*F*/
+				contPar++;
+				somaPar = somaPar + num;
+				mediaPar = (somaPar / contPar).toFixed(2);	//criar um contador par
+			}
+			if (num % 2 == 1) { /*G*/
+				contImpar++;
+			}
+		}
+		document.write("<br></br>A quantidade de números é: "+numDigitado+"<br>");
+		document.write("<br></br>A soma dos números é: "+soma+"<br>");
+		document.write("<br></br>A média dos números é: "+media+"<br>");
+		document.write("<br></br>A maior número é: "+maior+"<br>");
+		document.write("<br></br>O menor número é: "+menor+"<br>");
+		document.write("<br></br>A quantidade de números pares é: "+contPar+"<br>");
+		document.write("<br></br>A quantidade de números ímpares é: "+contImpar+"<br>");
+		document.write("<br></br>A soma dos números pares é: "+somaPar+"<br>");
+		document.write("<br></br>A média dos números pares é: "+mediaPar+"<br>");
+				
+		document.write("<br>Os números pares são: "+impar+"<br>");
+		document.write("Os números impares são: "+par+"<br>");
+
+
+
+
+</script>

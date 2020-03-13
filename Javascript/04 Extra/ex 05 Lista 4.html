@@ -1,0 +1,32 @@
+<meta charset=(UTF-8">
+
+<script>
+
+/*
+05. Faça um programa que receba o valor de x, calcule e imprima o valor de f(x)
+a. O valor de f(x) é dado pela seguinte fórmula:
+𝑓(𝑥) = 5𝑥 + 3 / √𝑥 2 − 16
+b. O valor de x deve ser maior que 4 ou menor do que -4, caso contrário o cálculo
+não poderá ser feito e isto deve ser informado para o usuário.
+c. Faça uso das seguintes funções do JS:
+Math.sqrt(número)  retorna a raiz quadrada do número informado
+Math.pow(base, expoente)  retorna a potência.
+*/
+
+	var x, z, s, result
+	
+	document.write("Calculando outra Função");
+	
+	x = parseInt(prompt("Informe um número"));
+
+	if ((x > 4) || (x < -4)) {
+		s = (5 * x) + 3;
+	    z = Math.pow(x, 2) - 16
+		z = Math.sqrt(z) 
+		result = s / z
+		document.write("<br><br>O resultado é " +result);
+	} else {
+		document.write("<br><br>O valor não poder ser maior que 4 ou menor do que -4");
+	}
+	
+</script>

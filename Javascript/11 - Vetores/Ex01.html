@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+/* 01. Faça um programa para controlar o estoque 
+e calcular o total de vendas diárias de uma determinada empresa. 
+a) O usuário deve lançar o estoque de cada um dos 5 produtos; 
+b) O usuário deve lançar o valor unitário de cada produto; 
+c) O usuário deve lançar a quantidade vendida de cada produto no dia; 
+d) O programa deve exibir um relatório apresentando o faturamento diário geral 
+e o estoque atual de cada produto. 
+*/
+
+var cont, faturamento, qtprod, estoqueAtual;
+var produto=[], estoque=[], valorUn=[], qtdeVendida=[];
+
+faturamento = 0;
+estoqueAtual = 0;
+
+for (cont=1; cont <= 5; cont++){
+	produto[cont - 1] = prompt("Informe o nome do produto "+cont);
+
+	estoque[cont - 1] = prompt("Informe o estoque do produto "+cont);
+
+	valorUn[cont - 1] = prompt("Informe o valor unitário do produto "+cont);
+	
+	qtdeVendida[cont - 1] = prompt("Informe a quantidade vendida do produto "+cont);
+}
+for (cont=1; cont <= 5; cont++){
+	faturamento = faturamento + (valorUn[cont - 1] * qtdeVendida[cont - 1]);
+	
+	estoqueAtual = (estoque[cont - 1] - qtdeVendida[cont - 1]);
+	
+	document.write("O estoque atual do item "+cont+ " é "+estoqueAtual+"<br>");
+}
+
+document.write("<br>O faturamento diário é R$ "+faturamento.toFixed(2)+" reais <br>");
+
+</script>
