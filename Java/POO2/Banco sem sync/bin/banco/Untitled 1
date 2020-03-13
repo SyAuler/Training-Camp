@@ -1,0 +1,4 @@
+nc = db.getSize();
+		nconta= ((int)(Math.random()*1000) % mc);
+		account = db.getAccount(nconta);
+		
