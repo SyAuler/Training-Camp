@@ -1,0 +1,113 @@
+meta.foundation-version{font-family:"/5.5.1/"}
+meta.foundation-mq-small{font-family:"/only screen/";width:0}
+meta.foundation-mq-small-only{font-family:"/only screen and (max-width: 40em)/";width:0}
+meta.foundation-mq-medium{font-family:"/only screen and (min-width:40.063em)/";width:40.063em}
+meta.foundation-mq-medium-only{font-family:"/only screen and (min-width:40.063em) and (max-width:64em)/";width:40.063em}
+meta.foundation-mq-large{font-family:"/only screen and (min-width:64.063em)/";width:64.063em}
+meta.foundation-mq-large-only{font-family:"/only screen and (min-width:64.063em) and (max-width:90em)/";width:64.063em}
+meta.foundation-mq-xlarge{font-family:"/only screen and (min-width:90.063em)/";width:90.063em}
+meta.foundation-mq-xlarge-only{font-family:"/only screen and (min-width:90.063em) and (max-width:120em)/";width:90.063em}
+meta.foundation-mq-xxlarge{font-family:"/only screen and (min-width:120.063em)/";width:120.063em}
+meta.foundation-data-attribute-namespace{font-family:false}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700'); /* font-family: 'Open Sans', sans-serif; */
+
+@font-face {
+  font-family: Caviar Dreams;
+  font-style: normal;
+  font-size: normal;
+  font-weight: normal;
+  src: url(../../fonts/CaviarDreams/CaviarDreams.ttf) format('TrueType');
+}
+
+/* FOLHA DE ESTILO */
+/* RESET */ 
+* {
+  margin: 0 auto; // barra de rolagem embaixo
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.window-wrapper {
+    display: block;
+    width: 100%;
+	align-content: center;
+  }
+
+  #main-content {
+    background-image: url(../img/background_index.jpg);
+    background-size: cover;
+    background-attachment: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+#window-h1{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 auto;
+	padding: 1%;
+}
+
+.container {
+	margin: 0 auto;
+    width: 65%;
+}
+
+img {
+	margin : 1%;
+}
+
+#score {
+	color: aliceblue;
+	font-size: 2em;
+	display: block;
+	width: 30%;
+	float: left;
+	margin-top: 2%;
+	margin-left: 25%;
+}
+#control {
+	font-size: 2em;
+	display: block;
+	width: 30%;
+	float: right;
+	margin-top: 2%;
+	margin-right: 10%;
+}
+
+#footer {
+	background-color: darkslategrey;
+	height: 13vh;
+	width: 100%;
+}
+
+.button_game {
+    background: -moz-linear-gradient(center top , #EDEDED 5%, #DFDFDF 100%) repeat scroll 0 0 #EDEDED;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 0 0 #FFFFFF inset;
+    color: #777777;
+    display: inline-block;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+.button_game:hover {
+    background: -moz-linear-gradient(center top , #DFDFDF 5%, #EDEDED 100%) repeat scroll 0 0 #DFDFDF;
+}
+.button_game:active {
+    position: relative;
+    top: 1px;
+}
+

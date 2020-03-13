@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Animate CSS-->
+  <link rel="stylesheet" href="assets/css/animate.css">
+
+  <!-- jQuery -->
+  <script src="assets/js/jquery_3_3_1.js"></script>
+
+  <title>Home | O que é lixo eletrônico?</title>
+</head>
+
+<body class="body-wrapper">
+  <div class="body-content">
+    <!-- Todo o conteúdo abaixo do body-content -->
+
+    <!-- header -->
+    <header class="header-wrapper">
+      <div class="header-content">
+
+        <nav class="nav-wrapper">
+          <div class="nav-content">
+            <ul class="nav-box kwicks">
+              <li class="nav-item"><a class="nav-link"
+                                      href="#window-wrapper-1"><img class="nav-img"
+                                                                    src="images/icons_nav/win_home_50px_50px.png"
+                                                                    title="Home"></a></li>
+              <li class="nav-item"><a class="nav-link"
+                                      href="#window-wrapper-2"><img class="nav-img"
+                                                                    src="images/icons_nav/win_info_50px_50px.png"
+                                                                    title="O que é lixo eletrônico?"></a></li>
+              <li class="nav-item"><a class="nav-link"
+                                      href="#window-wrapper-3"><img class="nav-img"
+                                                                    src="images/icons_nav/win_grafico_50px_50px.png"
+                                                                    title="Tipos de lixo eletrönico"></a></li>
+              <li class="nav-item"><a class="nav-link"
+                                      href="#window-wrapper-4"><img class="nav-img"
+                                                                    src="images/icons_nav/win_lixo_50px_50px.png"
+                                                                    title="Como reciclar?"></a></li>
+              <li class="nav-item"><a class="nav-link"
+                                      href="#window-wrapper-5"><img class="nav-img"
+                                                                    src="images/icons_nav/win_caminhao_50px_50px.png"
+                                                                    title="Pontos de reciclagem"></a></li>
+              <li class="nav-item"><a class="nav-link"
+                                      href="#window-wrapper-6"><img class="nav-img"
+                                                                    src="images/icons_nav/win_about_50px_50px.png"
+                                                                    title="Sobre nós"></a></li>
+            </ul> <!-- end nav-box -->
+          </div> <!-- end nav-content -->
+        </nav> <!-- end nav-wrapper -->
+
+      </div> <!-- end header-content -->
+    </header> <!-- end header-wrapper -->
+
+    <!-- main -->
+    <main class="main-wrapper">
+      <div class="main-content">
+
+        <!-- Janela 1 -->
+        <div id="window-wrapper-1" class="window-wrapper">
+          <div class="window-content">
+
+            <div class="window-1-text">
+              <div class="window-1-h1">
+                <h1 id="window-1-h1">Lixo eletronico</h1>
+              </div>
+              <div class="window-1-p">
+                  <p id="window-1-p">Atitudes sustentáveis para um mundo melhor</p>
+              </div>
+            </div>
+
+          </div> <!-- end window-content -->
+        </div> <!-- end window-wrapper-1 -->
+
+        <!-- Janela 2 -->
+        <div id="window-wrapper-2" class="window-wrapper">
+          <div class="window-content">
+
+            <div class="window-2-text">
+              <div class="window-2-text-column">
+                <div class="window-2-h2">
+                  <h2 class="window-2-h2">O que é lixo eletrônico</h2>
+                </div> <!-- end window-2-h2 -->
+                <div class="window-2-paragraph">
+                  <p>Lixo Eletrônico é todo resíduo material produzido pelo descarte de equipamentos eletrônicos. Com o elevado uso de equipamentos eletrônicos no mundo moderno, este tipo de lixo tem se tornado um grande problema ambiental quando não descartado em locais adequados.</p>
+                  <p>Segundo pesquisa publicada pela ONU em 2018, o Brasil é o 7º maior produtor de lixo eletrônico do mundo. Anualmente são produzidas 1,5 mil toneladas de itens relacionados a tecnologia e apenas 3% desse montante é descartado adequadamente. Tais dados geram preocupação, já que a composição química do descarte é tóxico ao meio ambiente e sua decomposição pode trazer muitos prejuízos à saúde.</p>
+                </div> <!-- end window-2-paragraph -->
+              </div> <!-- end window-2-text-column -->
+              <div class="window-2-text-column">
+                <div class="window-2-h2">
+                  <h2 class="window-2-h2">Composição do Lixo Eletrônico</h2>
+                </div> <!-- end window-2-h2 -->
+                <div class="window-2-paragraph">
+                  <p>O lixo eletrônico descartado de maneira incorreta causa um grave problema para o meio ambiente. Ao serem jogados no lixo comum, as substâncias químicas presentes nos eletrônicos, como mercúrio, cádmio, arsênio, cobalto, cobre, chumbo e alumínio, penetram no solo e nos lençóis freáticos contaminando plantas e animais por meio da água. Dessa forma, os seres humanos podem ser contaminados pela ingestão desses alimentos e desenvolverem doenças ao longo do tempo. Por isso, esses resíduos precisam de tratamento adequado para não causar danos à saúde e ao meio ambiente.</p>
+                </div> <!-- end window-2-paragraph -->
+              </div>
+            </div> <!-- end window-2-text -->
+
+          </div> <!-- end window-content -->
+        </div> <!-- end window-wrapper-2 -->
+
+        <!-- Janela 3 -->
+        <div id="window-wrapper-3" class="window-wrapper">
+          <div class="window-content">
+
+              <div class="chart-container">
+                <h5>Composição de 1 tonelada de sucata eletroeletrônica mista (%)</h5>
+                <canvas id="myChart"></canvas>
+              </div>
+
+          </div> <!-- end window-content -->
+        </div> <!-- end window-wrapper-3 -->
+
+        <!-- Janela 4 -->
+        <div id="window-wrapper-4" class="window-wrapper ">
+          <div class="window-content ">
+
+            <div class="window-3-h3">
+              <h3>Categorias de Lixo Eletrônico</h3>
+            </div>
+            <div>
+              <div>
+                <p>Os resíduos eletrônicos referem-se a todos os equipamentos elétricos e eletrônicos e suas peças que
+                  foram descartados pelo proprietário como lixo, sem a intenção de reutilização. Ele inclui uma ampla
+                  gama de produtos: qualquer item com circuitos ou componentes elétricos com alimentação de energia ou
+                  bateria. O lixo eletrônico abrange seis categorias de equipamentos:</p>
+              </div>
+              <div class="elixo">
+                <button id="btn_one"
+                        class="abas"
+                        onclick="AbrirPagina('tab-one', 'btn_one', '#4ABFC7')"><img src="images/icons_tab/tab_geladeira_128px.png"
+                                                                                    alt="Avatar">Temperatura</button>
+                <button id="btn_two"
+                        class="abas"
+                        onclick="AbrirPagina('tab-two', 'btn_two', '#4ABFC7')"><img src="images/icons_tab/tab_monitor_128px.png"
+                                                                                    alt="Avatar">Telas</button>
+                <button id="btn_three"
+                        class="abas"
+                        onclick="AbrirPagina('tab-three', 'btn_three', '#4ABFC7')"><img src="images/icons_tab/tab_lampada_128px.png"
+                                                                                    alt="Avatar">Lâmpadas</button>
+                <button id="btn_four"
+                        class="abas"
+                        onclick="AbrirPagina('tab-four', 'btn_four', '#4ABFC7')"><img src="images/icons_tab/tab_lava_roupas_128px.png"
+                                                                                    alt="Avatar">Grandes</button>
+                <button id="btn_five"
+                        class="abas"
+                        onclick="AbrirPagina('tab-five', 'btn_five', '#4ABFC7')"><img src="images/icons_tab/tab_microondas_128px.png"
+                                                                                    alt="Avatar">Pequenos</button>
+                <button id="btn_six"
+                        class="abas"
+                        onclick="AbrirPagina('tab-six', 'btn_six', '#4ABFC7')"><img src="images/icons_tab/tab_impressora_128px.png"
+                                                                                    alt="Avatar">Telecomunicações</button>
+                <div id="tab-one"
+                    class="conteudo">
+                  <p>Equipamentos típicos de controle de temperatura incluem: </p>
+                  <div class="column3">
+                    <ul>
+                      <li>Refrigeradores</li>
+                      <li>Geladeiras</li>
+                      <li>Freezers</li>
+                      <li>Ar condicionado</li>
+                    </ul>
+                  </div>
+                  <div class="column4">
+                    <ul>
+                      <li>Aquecedores</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="tab-two"
+                    class="conteudo">
+                  <p>Equipamentos típicos de tela incluem: </p>
+                  <div class="column3">
+                    <ul>
+                      <li>Televisões</li>
+                      <li>Notebooks</li>
+                      <li>Tablets</li>
+                      <li>Monitores</li>
+                    </ul>
+                  </div>
+                  <div class="column4">
+                    <ul>
+                      <li>Laptops</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="tab-three"
+                    class="conteudo">
+                  <p>Equipamentos típicos de lâmpadas incluem: </p>
+                  <div class="column3">
+                    <ul>
+                      <li>Lâmpadas fluorescentes</li>
+                      <li>Lâmpadas de descarga de alta intensidade</li>
+                      <li>Lâmpadas de LED</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="tab-four"
+                    class="conteudo">
+                  <p>Equipamentos típicos de tamanho grande incluem: </p>
+                  <div class="column3">
+                    <ul>
+                      <li>Máquinas de lavar roupas</li>
+                      <li>Secadoras de roupa</li>
+                      <li>Lava louças</li>
+                      <li>Fogões elétricos</li>
+                    </ul>
+                  </div>
+                  <div class="column4">
+                    <ul>
+                      <li>Copiadoras</li>
+                      <li>Painéis Solares</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="tab-five"
+                    class="conteudo">
+                  <p>Equipamentos típicos de tamanho pequeno incluem: </p>
+                  <div class="column3">
+                    <ul>
+                      <li>Aspiradores de pó</li>
+                      <li>Microondas</li>
+                      <li>Ventiladores</li>
+                      <li>Torradeiras</li>
+                    </ul>
+                  </div>
+                  <div class="column4">
+                    <ul>
+                      <li>Calculadoras</li>
+                      <li>Rádios</li>
+                      <li>Câmeras</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="tab-six" 
+                    class="conteudo">
+                  <p>Equipamentos típicos de telecomunicações incluem: </p>
+                  <div class="column3">
+                    <ul>
+                      <li>Celulares</li>
+                      <li>GPS</li>
+                      <li>Roteadores</li>
+                      <li>Computadores</li>
+                    </ul>
+                  </div>
+                  <div class="column4">
+                    <ul>
+                      <li>Impressoras</li>
+                      <li>Telefones</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- end window-content -->
+        </div> <!-- end window-wrapper-4 -->
+
+        <!-- Janela 5 -->
+        <div id="window-wrapper-5" class="window-wrapper">
+          <div class="window-content ">
+
+            <div class="recicle">
+              <div>
+                <h3>Pontos de Recolhimento</h3>
+              </div>
+              <div class="reciclagem">
+                <p>Conheça alguns pontos de recolhimento do Lixo Eletrônico</p>
+                <div class="column5">
+                  <a href="http://www.cascavel.pr.gov.br/coletalegal"
+                    target="_blank"
+                    title="Legenda para o link"><img src="images/img_pontos_reciclagem/coleta-legal-cascavel.png"
+                                                      alt="Legenda para a imagem"></a>
+                </div>
+                <div class="column6">
+                  <a href="https://acit.org.br/nucleo/nucleo-setorial-de-tecnologia-da-informacao"
+                    target="_blank"
+                    title="Legenda para o link"><img src="images/img_pontos_reciclagem/acao-coleta-toledo.png"
+                                                      alt="Legenda para a imagem"></a>
+                </div>
+                <div class="column7">
+                  <a href="http://www.rondon-it.com.br/site"
+                    target="_blank"
+                    title="Legenda para o link"><img src="images/img_pontos_reciclagem//rondonIT-rondon.png"
+                                                      alt="Legenda para a imagem"></a>
+                </div>
+              </div> <!-- end reciclagem -->
+            </div> <!-- end recicle -->
+
+          </div> <!-- end window-content -->
+        </div> <!-- end window-wrapper-5 -->
+
+        <!-- footer -->
+        <footer id="window-wrapper-6" class="footer-wrapper window-wrapper">
+            <div class="footer-content">
+
+              <!-- autores -->
+              <div class="autores column">
+                <div>
+                    <h5>Autores</h5>
+                </div>
+                <div>
+                  <p>Arthur Cesar de Morais</p>
+                  <p>Simone Cristhina Auler</p>
+                </div>
+              </div> <!-- end autores -->
+
+              <!-- material visual-->
+              <div class="material column">
+                <div>
+                    <h5>Material</h5>  
+                </div>
+                <div>
+                  <p><a href="https://www.istockphoto.com/br?esource=SEM_IS_GO_BR_Competitor_Pixabay_PT_Exact&kw=BR_Competitor_Exact_pixabay_e&kwid=s_43700035096533899_dc&pcrid=297154358545&gclid=Cj0KCQiAw5_fBRCSARIsAGodhk8ipbXkWlp_2dGF28Y8SLaVtL99OS5tW0MOPnUNG9dFH5Ll4uHjeFsaAkhrEALw_wcB&gclsrc=aw.ds" target="_blank">Pixabay</a></p>
+                  <p><a href="https://icons8.com.br/"
+                        target="_blank">Icon8</a></p>
+                </div>
+              </div> <!-- end material -->
+
+              <!-- informacoes -->
+              <div class="informacoes column">
+                <div>
+                    <h5>Informações</h5>
+                </div>
+                <div>
+                    <p>
+                      <a href="https://www.techtudo.com.br/noticias/2018/09/o-que-e-lixo-eletronico-veja-dicas-de-descarte-e-reciclagem-no-brasil.ghtml"
+                         target="_blank">O que é lixo eletrônico? Veja dicas de descarte e reciclagem no Brasil</a>
+                    </p>
+                    <p>
+                      <a href="https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM%202017/Global-E-waste%20Monitor%202017%20.pdf"
+                         target="_blank">The global e-waste</a>
+                    </p>
+                    <p>
+                      <a href="http://www.revistasg.uff.br/index.php/sg/article/viewFile/V9N4A8/SGV9N4A8"
+                         target="_blank">Papel das ONG's na redução do lixo eletrônico</a>
+                    </p>
+                    <p>
+                      <a href="https://www.tecmundo.com.br/mobilidade-urbana-smart-cities/134234-brasil-maior-produtor-lixo-eletronico-america-latina-diz-onu.htm"
+                      target="_blank"></a>
+                    </p>
+                    <p>
+                      <a href="https://www.tecmundo.com.br/mobilidade-urbana-smart-cities/134234-brasil-maior-produtor-lixo-eletronico-america-latina-diz-onu.htm"
+                      target="_blank">Brasil é o maior produtor de lixo eletrônico na América Latina, diz ONU</a>
+                    </p>
+                </div>
+              </div> <!-- end informacoes -->
+
+            </div> <!-- end window-content -->
+          </footer> <!-- end window-wrapper-6 -->
+
+      </div> <!-- end main-content -->
+    </main> <!-- end main-wrapper -->
+
+  </div> <!-- end body-content -->
+
+  <!-- Optional JavaScript -->
+  <script src="assets/js/Chart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body> <!-- body-wrapper -->
+
+</html> <!-- end html -->

@@ -1,0 +1,298 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400'); /* font-family: 'Open Sans', sans-serif; */
+
+
+/* stylesheet */ 
+* {
+  position: static;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.body-wrapper {
+  background-image: url(../../images/backgrounds/mountains_1920px_1080px.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.body-content {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* header */
+.header-wrapper {
+  position: fixed;
+  display: block;
+  left: 1%;
+}
+
+  /* nav */
+  .nav-item {
+    list-style-type: none;
+  }
+
+  .nav-img {
+    opacity: 0.6;
+    padding: 5%;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+    .nav-img:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .nav-img:active {
+      opacity: 1;
+    }
+
+/*main */
+
+  /* janelas */
+  .window-wrapper {
+    width: 100%;
+  }
+
+  #window-wrapper-2,
+  #window-wrapper-3,
+  #window-wrapper-4,
+  #window-wrapper-5,
+  #window-wrapper-6 {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+
+  /* Janela 1 */
+  .window-1-text {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F2F2F2;
+    text-shadow: 2px 2px 2px #4B5130;
+  }
+
+  .window-1-text h1 {
+    font-size: 6em;
+  }
+
+  .window-1-text p {
+    font-size: 2em;
+  }
+
+  /* Janela 2 */
+  .window-2-text {
+    color: #F2F2F2;
+    text-align: justify;
+  }
+
+  .window-2-h2 {
+    font-size: 2em;
+    margin-bottom: 1%;
+  }
+
+  .window-2-paragraph {
+    margin-bottom: 4%;
+  }
+
+  .window-2-paragraph p {
+    font-size: 1.3em;
+  }
+
+
+  /* Janela 3 */
+  #window-wrapper-3 {
+    color: #F2F2F2;
+  }
+		
+  canvas {
+    padding: 2%;
+  }
+
+  .chart-container {
+    padding-top: 10%;
+    height: 90vh;
+    width: 60vw;
+  }
+
+  .chart-container h5 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10%;
+  }
+
+  /* Janela 4 */
+  #window-wrapper-4,
+  #window-wrapper-5 {
+    padding-top: 10%;
+  }
+
+  #window-wrapper-4 p, h3 {
+    color: #F2F2F2;
+  }
+
+  #window-wrapper-4 p,
+  #window-wrapper-5 p {
+    font-size: 1.2em;
+    margin-bottom: 3%;
+  }
+
+  #window-wrapper-4 h3,
+  #window-wrapper-5 h3 {
+    font-size: 2em;
+    margin-bottom: 3%;
+  }
+
+  .elixo {
+    width: 100%;
+    float: left;
+    margin: 1px;
+    padding-top: 1%;
+  }
+    
+  /* Style tab links */
+  .abas {
+    margin:1px;
+    display:inline-block;
+    vertical-align: middle;
+    width: 15%;
+    height: 200px;
+    background-color: #93CDF2;
+    color: black;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 14px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+    .abas:hover {
+      background-color: #CECFFF;
+    }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .conteudo {
+    color: black;
+    display: none;
+    padding: 30px 50px;
+    height: 50%;
+  }
+  
+  #tab-one {background-color: transparent;}
+  #tab-two {background-color: transparent; }
+  #tab-three {background-color: transparent;}
+  #tab-four {background-color: transparent;}
+  #tab-five {background-color: transparent;}
+  #tab-six {background-color: transparent; }
+  
+  .tab1 {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab1 button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab1 button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab1 button.active {
+    background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tabcontent1 {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+  }
+
+  .column3, .column4 {
+    color: white;
+    width: 30%;
+    float: left;
+    margin: 1%;
+  }
+
+  .column4 {
+    margin-right: 0%;
+  }
+
+  /* Janela 5 */
+  #window-wrapper-5 {
+    color: #F2F2F2;
+  }
+
+  .column5, .column6, .column7 {
+	  width: 30%;
+	  float: left;
+	  margin: 1%;
+  }
+  
+	.column7 {
+	  margin: 1%;
+	}
+
+  .column5 img {
+    align-content: center;
+  }
+
+  /* Janela 6 */
+  .footer-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #F2F2F2;
+    height: 70%;
+    width: 80%;
+    text-align: center;
+    padding-top: 2%;
+  }
+
+  .footer-content h5 {
+    font-size: 3em;
+  }
+
+  .column {
+    margin-bottom: 3%;
+  }
+
+  .column a {
+    color: #F2F2F2;
+    text-decoration: none;
+  }
+
+  .column a:hover {
+    color: #4B5130;
+  }
